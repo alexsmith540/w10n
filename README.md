@@ -21,6 +21,11 @@ n.b. All resources are located in the Oregon us-west-2 AWS Region
   * MODIS Data [here]()
   * Landsat Data [here]()
 
+(links)
+Oscar: http://podaac.jpl.nasa.gov/dataset/OSCAR_L4_OC_third-deg
+GHRSST: http://podaac.jpl.nasa.gov/dataset/JPL-L2P-MODIS_A?ids=&values=&search=ghrsst
+Grace (water): http://podaac.jpl.nasa.gov/dataset/TELLUS_OCEANEOF_NC_RL05
+Grace (land): http://podaac.jpl.nasa.gov/dataset/TELLUS_LAND_NC_RL05
   
 Mission Data:
 * Grace: Water Thickness
