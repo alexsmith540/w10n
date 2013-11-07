@@ -12,7 +12,7 @@ From [here](http://reinvent.awsevents.com/hackathon.html):
 <img src="https://raw.github.com/witoff/w10n/master/media/challenge.png" width="400px;" alt="Challenge Text" style="width: 100px;height:50px;"/>
 
 ### Getting Started
-1, Explore the interactive tutorial [here](http://podaac-w10n.jpl.nasa.gov/tutorial/#examples-1)
+1, Explore the interactive tutorial [here](http://witoff.github.io/w10n/slides/index.html)
 
 2, Test our our live API here:
 
@@ -85,7 +85,7 @@ n.b. All resources are located in the Oregon us-west-2 AWS Region
 
 **Resources:**
 * [w10n homepage](http://scifari.org/taiga/)
-* [w10n tutorial](http://podaac-w10n.jpl.nasa.gov/tutorial/)
+* [w10n tutorial](http://witoff.github.io/w10n/slides/index.html)
 * [re:Invent homepage](http://reinvent.awsevents.com/hackathon.html)
 
 **Developers**
