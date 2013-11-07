@@ -25,8 +25,8 @@ By looping through all 3 arrays, we positionally derive a latitude, longitude, a
 
 URLS: 
 
-``` http://scifari.org/test/data/nc/coads_climatology.nc/COADSX[0:180]?output=json ``` Our X axis values
+http://scifari.org/test/data/nc/coads_climatology.nc/COADSX[0:180]?output=json ::Our X axis values
 
-``` http://scifari.org/test/data/nc/coads_climatology.nc/COADSY[0:90]?output=json ``` Our y axis values
+http://scifari.org/test/data/nc/coads_climatology.nc/COADSY[0:90]?output=json ::Our y axis values
 
-``` http://scifari.org/test/data/nc/coads_climatology.nc/SST[0:1,0:90,0:180]?output=json ``` Our measurement values (subsetted down to the first time bound, which in this case is a month)
+http://scifari.org/test/data/nc/coads_climatology.nc/SST[0:1,0:90,0:180]?output=json ::Our measurement values (subsetted down to the first time bound, which in this case is a month)
