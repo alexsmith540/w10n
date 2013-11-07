@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<!--
+Most of the cool stuff (api calls I use/etc) is way down at the bottom, Inline (for your viewing ease), inside $(document).ready...
+
+/*
+w10n widget deployment
+assembled by Alexander Smith, author of plot widget riffraff
+Alexander.Smith@jpl.nasa.gov
+*/
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+
+	<title>PO.DAAC Webification (W10n):: HTML5</title>
+	<link href="podaac_assets/css/podaac.jpl-banner.css" type="text/css" rel="stylesheet" />
+	<link href="podaac_assets/css/podaac.template.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="js/local.css" />
+	<!-- Required stylesheet -->
+	<link rel="stylesheet" href="core/deck.core.css">
+	
+	<!-- Extension CSS files go here. Remove or add as needed. -->
+	<link rel="stylesheet" href="extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="extensions/status/deck.status.css">
+	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
+
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<!-- <link rel="stylesheet" href="themes/style/web-2.0.css"> -->
+	<!-- <link rel="stylesheet" href="themes/style/neon.css"> -->
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="themes/transition/vertical-slide.css">
+	<script src="js/prettify.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/prettify.min.css" />
+	<link rel="stylesheet" type="text/css" href="js/sunburst.css" />
+	<script data-main="//cds.jpl.nasa.gov/widgets/plot/0.9/js/main.js" src="//cds.jpl.nasa.gov/widgets/plot/0.9/components/requirejs/require.js"></script>
+	<!-- Required Modernizr file -->
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#skipnav').hide();
+	})
+	</script>
+	
+</head>
+<body onload="prettyPrint();">
+<a id="skipnav" href="#maincontent">Follow this link to skip to the main content</a>
+<div id="podaac-header-container">
+  <header id="podaac-header" role="banner">
+    <div id="block-podaac-helper-podaac-jpl-banner" class="block block-podaac-helper first odd">
+
+  <div class="block-content">
+              
+    <div id="JPL-banner">
+  
+  <div id="JPL-home">
+    <a href="http://www.nasa.gov" id="JPL-NASA-link"><img src="podaac_assets/img/jpl-nasa-logo.png" width="70" height="70" alt="National Aeronautics &amp; Space Administration" title="National Aeronautics &amp; Space Administration" /></a>    
+    <a href="http://www.jpl.nasa.gov" id="JPL-home-link">Jet Propulsion Laboratory</a>    
+    <a href="http://www.caltech.edu/" id="JPL-caltech-link">California Institute of Technology</a>  </div>
+  
+  <div id="JPL-link-container">
+    <ul id="JPL-links"><li class="jpl-home first"><a href="http://www.jpl.nasa.gov/index.cfm">JPL Home</a></li>
+<li class="jpl-earth"><a href="http://www.jpl.nasa.gov/earth/index.cfm">Earth</a></li>
+<li class="jpl-solar-system"><a href="http://www.jpl.nasa.gov/solar-system/index.cfm">Solar System</a></li>
+<li class="jpl-stars-galaxy"><a href="http://www.jpl.nasa.gov/stars-galaxies/index.cfm">Stars &amp; Galaxies</a></li>
+<li class="jpl-science-tech last"><a href="http://scienceandtechnology.jpl.nasa.gov/">Science &amp; Technology</a></li>
+</ul>    
+    <div id="JPL-icon-container">
+      <span id="JPL-icon-slogan">Bring the Universe to You</span>
+      
+      <ul id="JPL-icons"><li class="jpl-mail first"><a href="http://www.jpl.nasa.gov/email/signup.cfm"><img src="podaac_assets/img/jpl-mail-icon.png" width="20" height="40" alt="JPL Email News" title="JPL Email News" /></a></li>
+<li class="jpl-facebook"><a href="http://www.facebook.com/NASAJPL"><img src="podaac_assets/img/jpl-facebook-icon.png" width="20" height="40" alt="JPL on Facebook" title="JPL on Facebook" /></a></li>
+<li class="jpl-twitter"><a href="http://twitter.com/NASAJPL"><img src="podaac_assets/img/jpl-twitter-icon.png" width="20" height="40" alt="JPL on Twitter" title="JPL on Twitter" /></a></li>
+<li class="jpl-gplus"><a href="http://plus.google.com/113315419190905475766/posts"><img src="podaac_assets/img/jpl-gplus-icon.png" width="20" height="40" alt="JPL on Google+" title="JPL on Google+" /></a></li>
+<li class="jpl-youtube"><a href="http://www.youtube.com/user/JPLnews"><img src="podaac_assets/img/jpl-youtube-icon.png" width="20" height="40" alt="JPL on YouTube" title="JPL on YouTube" /></a></li>
+<li class="jpl-itunes"><a href="http://itunes.apple.com/podcast/hd-nasas-jet-propulsion-laboratory/id262254981"><img src="podaac_assets/img/jpl-itunes-icon.png" width="20" height="40" alt="JPL on iTunes" title="JPL on iTunes" /></a></li>
+<li class="jpl-ustream"><a href="http://www.ustream.tv/nasajpl2"><img src="podaac_assets/img/jpl-ustream-icon.png" width="20" height="40" alt="Live Streaming Video" title="Live Streaming Video" /></a></li>
+<li class="jpl-rss"><a href="http://www.jpl.nasa.gov/rss/index.cfm"><img src="podaac_assets/img/jpl-rss-icon.png" width="20" height="40" alt="RSS" title="RSS" /></a></li>
+<li class="jpl-blog"><a href="http://blogs.jpl.nasa.gov/"><img src="podaac_assets/img/jpl-blog-icon.png" width="20" height="40" alt="JPL Blog" title="JPL Blog" /></a></li>
+<li class="jpl-mobile last"><a href="http://www.jpl.nasa.gov/onthego/"><img src="podaac_assets/img/jpl-mobile-icon.png" width="20" height="40" alt="JPL Mobile" title="JPL Mobile" /></a></li>
+</ul>    </div>
+  </div>
+  <div class="clearfix podaac-clear"></div>
+  
+</div><!-- /.JPL-banner -->
+
+  </div>
+
+</div><!-- /.block -->
+    <hgroup id="podaac-name-and-slogan">
+      <a href="http://podaac.jpl.nasa.gov" title="Home" rel="home" id="podaac-logo"><img src="podaac_assets/img/logo.png" alt="Home" /></a>    </hgroup>
+    <img src="podaac_assets/img/satellite.png" alt="podaac satellite logo" id="podaac-header-satellite" />
+    
+    <div class="podaac-clear"></div>
+  </header>
+  <img src="podaac_assets/img/header-banner.jpg" alt="podaac header banner" id="podaac-header-banner" />
+</div>
+
+<div id="podaac-main-container">
+  <div id="podaac-content-backdrop">
+    <div id="podaac-backdrop">
+      <div id="podaac-backdrop-gradient"></div>
+    </div>
+  </div>
+  
+  <div id="podaac-main">
+    <div id="podaac-navigation"></div>
+    <div class="podaac-clear"></div>
+    
+    <div id="podaac-content-container">
+      <div id="podaac-content">
+        <div id="podaac-page-content">
+<div class="deck-container dcembed html5show">
+<!-- Begin slides. Just make elements with a class of slide. -->
+<a name="maincontent"></a>
+<section id="basics" class="slide">
+	<!-- <h1>Slide</h1> -->
+	
+<h2>The Basics</h2>
+
+<p>
+	We assembled an embeddable widget for any website in which with some simple configuration, you can view PO.DAAC data in a 2d lineplot, or a 3d map plot.
+</p>
+<p>
+To embed this service in your page, it is simple. First thing is first, you include one JavaScript file in a webpage.
+</p>
+<pre class="prettyprint lang-js">
+&lt;script data-main="//	.jpl.nasa.gov/widgets/plot/0.9/js/main.js" src="//cds.jpl.nasa.gov/widgets/plot/0.9/components/requirejs/require.js"&gt;&lt;/script&gt;
+</pre>
+<p>
+From there, I can add an interactive widget like this to my webpage in one more line of code :)
+</p>
+<p class="widgetHolder">
+<img src="img/3dplot_spherical.jpg" alt="3d plot example" />
+</p>
+</section>
+
+<section class="slide">
+<h2>Option 1: Embedding a Plot in HTML</h2>
+<p>
+We have two options to embed a widget in a site. Either programatically through JavaScript, or through a standard HTML tag.
+</p>
+<p>
+The HTML tag approach (Recommended if you're not a JavaScript person)
+</p>
+<pre class="prettyprint lang-js">
+&lt;div 
+	data-viz-type="plot.xyz" 
+	xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[]" 
+	xmask="[100000002004087730000]" 
+	xlabel="lon" 
+	ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lat[]" 
+	ylabel="lat" 
+	zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[2:3]"
+	zmask="[100000002004087730000]" 
+	zlabel="sea surface temperature" 
+	format="spherical"
+	colorbar="#ffffe5,#fff7bc,#fee391,#fec44f,#fe9929,#ec7014,#cc4c02,#993404,#662506"&gt;&lt;/div&gt;
+</pre>
+<a href="#javascript-api">Wait, wait, I&#039;m Definitely a JavaScript person, show me the API...</a>
+</section>
+<section class="slide" id="embed-params">
+<h2>HTML Embed Attributes</h2>
+<p>All XYZ HTML Embed Parameters:</p>
+<pre class="prettyprint lang-html">
+xdata= webified URL string for x data
+ydata = webified URL string for y data
+zdata = webified URL string for z data
+xlabel|ylabel|zlabel = label for x|y|z axis label
+xmask|ymask|zmask = string (as a js array) i.e. xmask="[14,25,35]". Values not to plot
+
+format = string, format of the object. Possible values: spherical|sphericalterrain|flat|flatterrain. Default is Flat.
+
+Easter Eggs:
+rotating = boolean (string i.e. rotating="true"), default is false (whether or not to slowly auto rotate your model);
+riftview = boolean (string, i.e. riftview="true"), default is false (style your widget fullscreen with CSS, and view your model an Oculus Rift!! Requires a chrome plugin: https://github.com/benvanik/vr.js)
+</pre>
+</section>
+<section class="slide" id="javascript-api">
+<h2>Option 2: Embedding a Plot Widget with the JavaScript API</h2>
+<p>
+First we take care of making some containers for these widgets. You can customize them however you'd prefer. In this case we just append two widgets with jQuery.
+</p>
+<pre class="prettyprint lang-js">
+var xyz = $('&lt;div id="xyzexample" /&gt;');
+
+$('body').append(xyz);
+</pre>
+</section>
+<section class="slide" id="adding-metadata">
+<h2>Next, we add metadata</h2>
+<p>
+Now we need to give the widget some metadata
+</p>
+<pre class="prettyprint lang-js">
+//xyz widget meta
+var xyz_params = {
+    type:'xyz',
+    selector:'#xyzexample',
+    xdata:'http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[]',
+    ydata:'http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lat[]',
+    zdata:'http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[0:1]',
+    zmask:[100000002004087730000],
+    zlabel:'zlabel',
+    ymask:[100000002004087730000],
+    xlabel:'xlabel',
+    ylabel:'ylabel',
+    format:'spherical',
+    width:300,
+    height:200
+}
+</pre>
+</section>
+<section class="slide" id="call-the-widget">
+<h2>Now, call the widget</h2>
+<p>
+And finally, trigger the widget programatically when we need to.
+</p>
+<pre class="prettyprint lang-js">
+$(document).trigger('callPlotAPI',xyz_params);
+</pre>
+<a id="xyz1trigger">
+		Click here to instantiate our 3d widget
+	</a>
+<div class="widgetEmbed" id="widgetxyz1">
+	<img class="placeholder_img" src="img/3dplot_api1.jpg" alt="3d api plot placeholder" />
+</div>
+</section>
+<section class="slide" id="xyz-params">
+	<h2>All XYZ Plot Parameters</h2>
+<pre class="prettyprint lang-js">
+var xyz_params = {
+	type:'xyz', //STRING, REQUIRED. THIS SHOULD ALWAYS BE 'xyz'
+	selector:'#xyzexample', //STRING, REQUIRED. THE CSS SELECTOR OF OUR TARGET
+	xdata:'http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[]', //STRING, REQUIRED. A URL OF OUR X DATA
+	ydata:'http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lat[]', //STRING, REQUIRED. A URL OF OUR Y DATA
+	zdata:'http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[0:1]', //STRING, REQUIRED. A URL OF OUR Z DATA
+	zmask:[100000002004087730000], //ARRAY, OPTIONAL. ANY VALUES YOU DON'T WANT PLOTTED GO HERE.
+	zlabel:'zlabel', //STRING, OPTIONAL. A CUSTOM Z AXIS LABEL.
+	ymask:[100000002004087730000], //ARRAY, OPTIONAL. ANY VALUES YOU DON'T WANT PLOTTED GO HERE.
+	xlabel:'xlabel', //STRING, OPTIONAL. A CUSTOM X AXIS LABEL.
+	ylabel:'ylabel', //STRING, OPTIONAL. A CUSTOM Y AXIS LABEL.
+    xlimit:[225,280], //ARRAY, OPTIONAL. THE LIMITS (LOW,HIGH) OF THE X AXIS
+    ylimit:[225,280], //ARRAY, OPTIONAL. THE LIMITS (LOW,HIGH) OF THE Y AXIS
+	format:'spherical', //STRING, OPTIONAL. Possible values: sphericalterrain|spherical|flat|terrain (DEFAULTS TO FLAT).
+	width:300, //INT OR STRING (I.E. '400px'), OPTIONAL. WILL DEFAULT TO PARENT CONTAINER SIZE IF NOT SPECIFIED
+	height:200 //INT OR STRING (I.E. '400px'), OPTIONAL. WILL DEFAULT TO PARENT CONTAINER SIZE IF NOT SPECIFIED,
+    textcolor:'#000', //hex color of our text, lines, etc. #000 (black) by default
+    colorbar:['#fff','#e00','#ccc',...], //array of custom colorbins. defaults to rainbow
+	rift:false, //BOOLEAN, OPTIONAL. USE THE OCULUS RIFT RENDERER, FALSE BY DEFAULT make sure to set your widget to be fullscreen in the CSS somewhere...
+	rotate:false //BOOLEAN, OPTIONAL. ROTATE THE MESH IN THE SCENE, FALSE BY DEFAULT
+}
+</pre>
+</section>
+<section class="slide" id="xyz-easter-eggs">
+<h2>XYZ API EASTER EGGS</h2>
+
+<pre class="prettyprint lang-js">
+//to transition from one format to another without having to re-instantiate the widget
+$('#myVizElement1').trigger('changepos',{type:'spherical'});
+//possible values: 'spherical','sphericalterrain','flatterrain','flat'
+
+//once you click "instantiate" below, check under our widget for simple controls we made...
+</pre>
+<a id="xyz2trigger">
+		Click here to instantiate our 3d widget
+	</a>
+<div class="widgetEmbed" id="widgetxyz2">
+	<img class="placeholder_img" src="img/3dplot_api2.jpg" alt="3d api plot placeholder" />
+</div>
+
+<ul class="easterOpts">
+<li>
+<a class="transformers" data-transform="spherical">Transform to Spherical View</a>
+</li>
+<li>
+<a class="transformers" data-transform="flat">Transform to Flat View</a>
+</li>
+<li>
+<a class="transformers" data-transform="sphericalterrain">Transform to Spherical + False Terrain View</a>
+</li>
+<li>
+<a class="transformers" data-transform="flatterrain">Transform to Flat + False Terrain View</a>
+</li>
+</ul>
+</section>
+<section class="slide" id="xy-plotting">
+<h2>XY (2d) Plotting</h2>
+<p>
+In addition to the 3d plots, we offer a range of 2d plots.
+</p>
+<p>An embedded HTML Plot Widget:</p>
+<pre class="prettyprint lang-html">
+&lt;div 
+data-viz-type="plot.xy" 
+
+xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[0:360:2]" 
+xlimit="[0, 360]"
+xlabel="Longitude" 
+
+ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[0:1,90:91,0:360:2]" 
+ymask="[100000002004087730000]" 
+ylimit="[298, 304]"
+ylabel="Sea Surface Temperature"
+
+width="600px"
+height="400px"
+
+&gt;&lt;/div&gt;
+</pre>
+</section>
+<section class="slide" id="xy-example">
+	<h2>XY Plot Example:</h2>
+	<a id="xy1trigger">
+		Click here to instantiate our 2d widget
+	</a>
+<div class="widgetEmbed" id="widgetxy1">
+	<img class="placeholder_img" src="img/2dplot_api1.jpg" alt="2d api plot placeholder" />
+</div>
+<p>
+The parameters for this particular plot:
+</p>
+<pre class="prettyprint lang-js">
+var xy_params = {
+	selector:'#widgetxy1',
+	type:"xy", 
+	xdata:"http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[0:360:2]",
+	xlimit:[0, 360],
+	xlabel:"Longitude",
+	ydata:"http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[0:1,90:91,0:360:2]",
+	ymask:"[100000002004087730000]",
+	ylimit:[298, 304],
+	ylabel:"Sea Surface Temperature",
+	textcolor:'#06c'
+}
+</pre>
+</section>
+<section class="slide" id="xy-api-params">
+<h2>All XY JavaScript API Parameters</h2>
+	<pre class="prettyprint lang-js">
+{
+    type:'xy',//STRING, REQUIRED. SHOULD ALWAYS BE 'xy'
+    selector:'#xyexample', //STRING, REQUIRED. A CSS SELECTOR, LIKE JQUERY DOES IT...
+    xdata:'http://seastore.jpl.nasa.gov:18080/ftp/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[]', //STRING, REQUIRED. THE URL TO THE X DATA
+    ydata:'http://seastore.jpl.nasa.gov:18080/ftp/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[1:2,25:27,0:360]', //STRING, REQUIRED. THE URL TO THE Y DATA
+    zmask:[100000002004087730000], //ARRAY, OPTIONAL. ANY VALUES YOU DON'T WANT PLOTTED GO HERE.
+    ymask:[100000002004087730000], //ARRAY, OPTIONAL. ANY VALUES YOU DON'T WANT PLOTTED ON Y GO HERE.
+    xrange:[0,360], //ARRAY, OPTIONAL. A MIN AND MAX RANGE FOR THE X AXIS
+    yrange:[200,400], //ARRAY, OPTIONAL. A MIN AND MAX RANGE FOR THE Y AXIS
+    xlabel:'xlabel', //STRING, OPTIONAL. CUSTOM X AXIS LABEL
+    ylabel:'ylabel', //STRING, OPTIONAL. CUSTOM Y AXIS LABEL
+    xlimit:[225,280], //ARRAY, OPTIONAL. THE LIMITS (LOW,HIGH) OF THE X AXIS
+    ylimit:[225,280], //ARRAY, OPTIONAL. THE LIMITS (LOW,HIGH) OF THE Y AXIS
+    width:600, //INT OR STRING (I.E. '600px'), OPTIONAL. A static width. Without this, the widget will adhere to the height of the selector element provided above.
+    height:600, //INT OR STRING (I.E. '600px'), OPTIONAL. A static width. Without this, the widget will adhere to the height of the selector element provided above.
+    enableOptions:true, //BOOLEAN. THIS ENABLES A FORM IN THE WIDGET TO ADJUST VALUES/PARAMETERS.
+    xy_chart_type:'line' //STRING, chart format. Possilble values: bar|line|line_focused|scatter. Defaults to "line"
+}
+	</pre>
+
+</section>
+<section class="slide" id="xy-html-attributes">
+<h2>All HTML XY Embed Attributes</h2>
+<pre class="prettyprint lang-js">
+
+data-viz-type="plot.xy" //ALWAYS REQUIRED, must be plot.xy for 2d plots
+
+xy_chart_type="line" ////STRING, the chart format. OPTIONAL. Possilble values: bar|line|line_focused|scatter. Defaults to "line"
+
+xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[0:360:2]" //STRING, REQUIRED. THE URL TO THE X DATA
+
+xlimit="[0, 360]" //STRING (as an array), OPTIONAL. THE LIMITS (LOW,HIGH) OF THE X AXIS
+
+xlabel="Longitude" //STRING, OPTIONAL. CUSTOM X AXIS LABEL
+
+ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[0:1,90:91,0:360:2]" //STRING, REQUIRED. THE URL TO THE Y DATA
+
+ymask="[100000002004087730000]" //ARRAY, OPTIONAL. ANY VALUES YOU DON'T WANT PLOTTED ON THE Y AXIS GO HERE.
+
+ylimit="[298, 304]" //STRING (as an array), OPTIONAL. THE LIMITS (LOW,HIGH) OF THE Y AXIS
+
+ylabel="Sea Surface Temperature" //STRING, OPTIONAL. CUSTOM Y AXIS LABEL
+
+width="600px" //INT OR STRING (I.E. '600px'), OPTIONAL. A static width. Without this, the widget will adhere to the height of the selector element provided above.
+
+height="400px" //INT OR STRING (I.E. '600px'), OPTIONAL. A static width. Without this, the widget will adhere to the height of the selector element provided above.
+
+enableoptions="true" //BOOLEAN. THIS ENABLES A FORM IN THE WIDGET TO ADJUST VALUES/PARAMETERS.
+
+</pre>
+</section>
+<section class="slide" id="double-bonus">
+<h2>Even more Widgets!</h2>
+<h3>In addition to the 2d and 3d widgets you have seen here, JPL&#039;s Multiple-Mission Instrument Processing Laboratory (MIPL) has built a full spectrum of widgets, services, and examples, including work which utilizes the Oculus Rift VR Headset (<a href="http://webviz.jpl.nasa.gov" alt="JPL web viz portal">http://webviz.jpl.nasa.gov</a>).</h3>
+
+<!-- 
+ZOMG if you have an oculus rift, go the stuff below this::::
+
+<h2>Last Bonus Feature:</h2>
+<img src="img/oculusrift.jpg" alt="Oculus Rift Headset Picture" />
+<p>
+We have managed to hook up an Oculus Rift Virtual Reality headset into these models via the web :)
+</p>
+<p>
+	In order to use the oculus rift demo, you need:
+    <ol>
+        <li> <a href="http://www.oculusvr.com/" alt="Oculus VR Website">An Oculus Rift</a></li>
+        <li> An Open Source Google Chrome Plugin that you can download and install from github here (<a alt="Required vr.js plugin for oculus rift" href="https://github.com/benvanik/vr.js">https://github.com/benvanik/vr.js</a>)
+        </li>
+    </ol>
+</p>
+<p>
+Once you have them, you can view an example <a href="examples/oculus_rift.html" alt="Oculus Rift Demo">here</a>
+
+OK be done gawking for a moment...
+
+</p> -->
+</section>
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+	
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+<!-- End extension snippets. -->
+
+</div>
+
+<!--end content-->
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="podaac-footer">
+	<a id="backhome" href="http://podaac.jpl.nasa.gov/podaac_labs">Back to PO.DAAC Labs Home</a>
+	<a id="backhome" href="./">Back to PO.DAAC Webification Home</a>
+
+	<div class="info">
+		<span>Site Manager: Thomas Huang</span>
+		<span>Webmaster: Thomas Huang</span>
+		<a class="policy" href="http://www.jpl.nasa.gov/copyrights.cfm">Privacy Policy</a>
+		<a class="policy" href="http://www.jpl.nasa.gov/imagepolicy/">Image Policy</a>
+	</div>
+</div>
+<!-- Required JS files. -->
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="core/deck.core.js"></script>
+<script src="extensions/hash/deck.hash.js"></script>
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<script>
+/*
+w10n widget deployment
+assembled by Alexander Smith, author of plot widget riffraff
+Alexander.Smith@jpl.nasa.gov
+*/
+
+//so you can see,
+//this is where the magic all happens
+//you should put JS in the js folder in real life.
+
+$(document).ready(function(){
+	$.deck('.slide');
+	//this is how we wire up our first example
+	$('#xyz1trigger').click(function(){
+		$('#xyz1trigger').remove();
+		$('#widgetxyz1 .placeholder_img').remove();
+		var xyz_params = {
+		    type:'xyz',
+		    selector:'#widgetxyz1',
+		    xdata:'http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[0:360:2]',
+		    ydata:'http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lat[0:180:2]',
+		    zdata:'http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[0:1,0:180:2,0:360:2]',
+		    zmask:[100000002004087730000],
+		    zlabel:'zlabel',
+		    ymask:[100000002004087730000],
+		    xlabel:'xlabel',
+		    ylabel:'ylabel',
+		    format:'spherical',
+		    width:Math.floor($('#widgetxyz1').width()),
+		    height:Math.floor($('#widgetxyz1').height()),
+		    textcolor:'#ddd'
+		};
+		$(document).trigger('callPlotAPI',xyz_params);
+	})
+
+	$('#xyz2trigger').click(function(){
+		$('#xyz2trigger').remove();
+		$('#widgetxyz2 .placeholder_img').remove();
+		var xyz_params = {
+		    type:'xyz',
+		    selector:'#widgetxyz2',
+		    
+		    xdata:'http://podaac-w10n.jpl.nasa.gov/w10n/ghrsst/data/L4/NCAMERICA/JPL/MUR/2010/018/20100118-JPL-L4UHfnd-NCAMERICA-v01-fv02-MUR.nc.gz/lon[0:13501:40]',
+		    ydata:'http://podaac-w10n.jpl.nasa.gov/w10n/ghrsst/data/L4/NCAMERICA/JPL/MUR/2010/018/20100118-JPL-L4UHfnd-NCAMERICA-v01-fv02-MUR.nc.gz/lat[0:8201:40]',
+		    zdata:'http://podaac-w10n.jpl.nasa.gov/w10n/ghrsst/data/L4/NCAMERICA/JPL/MUR/2010/018/20100118-JPL-L4UHfnd-NCAMERICA-v01-fv02-MUR.nc.gz/analysed_sst[0:1,0:8201:40,0:13501:40]',
+		    zmask:[-9999,-32768,-128],
+		    zlabel:"<a href='http://podaac-w10n.jpl.nasa.gov/w10n/ghrsst/data/L4/NCAMERICA/JPL/MUR/2010/018/20100118-JPL-L4UHfnd-NCAMERICA-v01-fv02-MUR.nc.gz/?output=html&traverse' target='_blank'>GHRSST 20100118-JPL-L4UHfnd-NCAMERICA-v01-fv02-MUR.nc.gz sst</a>",
+		    ymask:[100000002004087730000],
+		    xlabel:'a xlabel',
+		    ylabel:'a ylabel',
+		    format:'flat',
+		    width:Math.floor($('#widgetxyz2').width()),
+		    height:Math.floor($('#widgetxyz2').height()),
+		    textcolor:'#ddd',
+		    colorbar:['#006837','#1a9850','#66bd63','#a6d96a','#d9ef8b','#ffffbf','#fee08b','#fdae61','#f46d43','#d73027','a50026','#a50026']
+		};
+		$('.easterOpts').css('opacity','1')
+		$(document).trigger('callPlotAPI',xyz_params);
+	});
+	//our little easter egg listeners
+	$(document).on('click','.transformers',function(){
+		var type = $(this).attr('data-transform');
+		$('#widgetxyz2').trigger('changepos',{type:type});
+	});
+	//ok td plot widgets::
+	$('#xy1trigger').click(function(){
+		$('#xy1trigger').remove();
+		$('#widgetxy1 .placeholder_img').remove();
+		var xy_params = {
+			selector:'#widgetxy1',
+			type:"xy", 
+			xdata:"http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[0:360:2]",
+			xlimit:[0, 360],
+			xlabel:"Longitude",
+			ydata:"http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[0:1,90:91,0:360:2]",
+			ymask:"[100000002004087730000]",
+			ylimit:[298, 304],
+			ylabel:"Sea Surface Temperature",
+			textcolor:'#06c'
+		}
+		$(document).trigger('callPlotAPI',xy_params);
+	})
+	//chrome detector
+	var isSafari = navigator.userAgent.indexOf("Safari") > -1;
+	var isChrome = navigator.userAgent.indexOf('Chrome') > -1;
+	if(!isChrome && !isSafari){
+		console.log('safari and chorme not detected')
+		$('#basics h2').after('<h4><a style="text-decoration:none;">If you are interested in using the interactive 3d visualization capabilities, we highly recommend you use Google Chrome or Apple Safari as they process 3d data the fastest.</a></h4>'); //yep.
+	}
+	else{
+		console.log('its chrome or safari');
+	}
+
+})
+</script>
+</body>
+</html>

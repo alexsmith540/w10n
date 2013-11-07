@@ -1,0 +1,133 @@
+<html>
+<head>
+	<script src="../js/prettify.min.js"></script>
+	<link rel="stylesheet" href="../js/prettify.min.css" type="text/css" />
+	<link rel="stylesheet" href="../js/sunburst.css" type="text/css" />
+	<script data-main="//cds.jpl.nasa.gov/widgets/plot/0.8/js/main.js" src="//cds.jpl.nasa.gov/widgets/plot/0.8/components/requirejs/require.js"></script>
+ <link type="text/css" rel="stylesheet" href="http://podaac-w10n.jpl.nasa.gov/podaac_template/css/banner.css" />
+ <link rel="stylesheet" type="text/css" href="../js/local.css" />
+</head>
+<body onload="prettyPrint();">
+<div id="podaac-page">
+<div id="podaac-header">
+  <div id="JPL-banner">
+    <div id="JPL-home">
+      <a target="_blank" href="http://www.nasa.gov" id="JPL-NASA-link"></a>          
+      <a target="_blank" href="http://www.jpl.nasa.gov" id="JPL-home-link">Jet Propulsion Laboratory</a>          
+      <a target="_blank" href="http://www.caltech.edu/" id="JPL-caltech-link">California Institute of Technology</a>        </div>
+    
+    <div id="JPL-link-container">
+      <ul id="JPL-links">
+        <li class="jpl-home first"><a target="_blank" href="http://www.jpl.nasa.gov/index.cfm">JPL Home</a></li>
+        <li class="jpl-earth"><a target="_blank" href="http://www.jpl.nasa.gov/earth/index.cfm">Earth</a></li>
+        <li class="jpl-solar-system"><a target="_blank" href="http://www.jpl.nasa.gov/solar-system/index.cfm">Solar System</a></li>
+        <li class="jpl-stars-galaxy"><a target="_blank" href="http://www.jpl.nasa.gov/stars-galaxies/index.cfm">Stars &amp; Galaxies</a></li>
+        <li class="jpl-science-tech last"><a target="_blank" href="http://scienceandtechnology.jpl.nasa.gov/">Science &amp; Technology</a></li>
+      </ul>          
+      <div id="JPL-icon-container">
+        <span id="JPL-icon-slogan">Bring the Universe to You</span>
+        
+        <ul id="JPL-icons">
+          <li class="jpl-mail first"><a target="_blank" href="http://jpl.kintera.org/signup/" class="jpl-icon jpl-email-news-icon"></a></li>
+          <li class="jpl-facebook"><a target="_blank" href="http://www.facebook.com/NASAJPL" class="jpl-icon jpl-facebook-icon"></a></li>
+          <li class="jpl-twitter"><a target="_blank" href="http://twitter.com/NASAJPL" class="jpl-icon jpl-twitter-icon"></a></li>
+          <li class="jpl-gplus"><a target="_blank" href="http://plus.google.com/113315419190905475766/posts" class="jpl-icon jpl-gplus-icon"></a></li>
+          <li class="jpl-youtube"><a target="_blank" href="http://www.youtube.com/user/JPLnews" class="jpl-icon jpl-youtube-icon"></a></li>
+          <li class="jpl-itunes"><a target="_blank" href="http://itunes.apple.com/podcast/hd-nasas-jet-propulsion-laboratory/id262254981" class="jpl-icon jpl-itunes-icon"></a></li>
+          <li class="jpl-ustream"><a target="_blank" href="http://www.ustream.tv/nasajpl2" class="jpl-icon jpl-ustream-icon"></a></li>
+          <li class="jpl-rss"><a target="_blank"  href="http://www.jpl.nasa.gov/rss/index.cfm" class="jpl-icon jpl-rss-icon"></a></li>
+          <li class="jpl-blog"><a target="_blank" href="http://blogs.jpl.nasa.gov/" class="jpl-icon jpl-blog-icon"></a></li>
+          <li class="jpl-mobile last"><a target="_blank" href="http://www.jpl.nasa.gov/onthego/" class="jpl-icon jpl-mobile-icon"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="clear; both;"></div>
+  </div>
+
+  <div id="podaac-banner">
+    <a href="http://podaac.jpl.nasa.gov">
+      <div id="podaac-banner-logo">
+        <img src="/podaac_template/images/podaac_logo.png">
+      </div>      
+
+      <div id="podaac-banner-text">
+        <h2>PO.DAAC</h2>
+        <h3>PHYSICAL OCEANOGRAPHY</h3>
+        <h4>DISTRIBUTED ACTIVE ARCHIVE CENTER</h4>
+      </div>
+    </a>
+      <div>
+        <h2 style="padding-top:40px">Webification (w10n) Service</h2>
+      </div>
+  </div>
+</div>
+<div id="podaac-content">
+<!--begin content-->
+<div 
+data-viz-type="plot.xyz" 
+xdata="http://seastore.jpl.nasa.gov:18080/ftp/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/lon[0:2030:10,0:1354:10]" 
+xmask="[100000002004087730000]" 
+xlabel="longitude" 
+ydata="http://seastore.jpl.nasa.gov:18080/ftp/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/lat[0:2030:10,0:1354:10]" 
+ylabel="latitude" 
+ymask="[-9999]" 
+zdata="http://seastore.jpl.nasa.gov:18080/ftp/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/sea_surface_temperature[0:1,0:2030:10,0:1354:10]" 
+zmask="[-9999,-32767,-128]" 
+zlabel="<a href='http://seastore.jpl.nasa.gov:18080/ftp/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/?output=html&traverse' target='_blank'>L2P GHRSST sst</a>" 
+class="widgetxyz" 
+format="flatterrain" 
+width="800" 
+height="600" 
+colorbar="#ffffe5,#fff7bc,#fee391,#fec44f,#fe9929,#ec7014,#cc4c02,#993404,#662506"
+style="background:#000" 
+textcolor="#eee"
+></div>
+<div class="howdowedothis">
+<h4>How do we do this?</h4>
+<div>
+<p>First, embed the libs in your site</p>
+<pre class="prettyprint">
+&lt;script data-main="//cds.jpl.nasa.gov/widgets/plot/0.8/js/main.js" src="//cds.jpl.nasa.gov/widgets/plot/0.8/components/requirejs/require.js"&gt;&lt;/script&gt;
+</pre>
+
+<pre class="prettyprint">
+//Notice the URL's for step-indexing. That's how we are getting it to load a massive dataset very fast for a first look. i.e.: the [0:1,0:8201:40,0:13501:40] at the end says to step through our array dimensions and use every 40th value. http://podaac-w10n.jpl.nasa.gov/w10n/ghrsst/data/L4/NCAMERICA/JPL/MUR/2010/018/20100118-JPL-L4UHfnd-NCAMERICA-v01-fv02-MUR.nc.gz/analysed_sst[0:1,0:8201:40,0:13501:40]
+&lt;div 
+    data-viz-type="plot.xyz" 
+    xdata="http://seastore.jpl.nasa.gov:18080/ftp/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/lon[0:2030:10,0:1354:10]" 
+    xmask="[100000002004087730000]" 
+    xlabel="longitude" 
+    ydata="http://seastore.jpl.nasa.gov:18080/ftp/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/lat[0:2030:10,0:1354:10]" 
+    ylabel="latitude" 
+    ymask="[-9999]" 
+    zdata="http://seastore.jpl.nasa.gov:18080/ftp/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/sea_surface_temperature[0:1,0:2030:10,0:1354:10]" 
+    zmask="[-9999,-32767,-128]" 
+    zlabel="&lt;a href='http://seastore.jpl.nasa.gov:18080/ftp/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/?output=html&traverse' target='_blank'>L2P GHRSST sst&lt;/a&gt;" 
+    class="widgetxyz" 
+    format="flatterrain" 
+    width="800" 
+    height="600" 
+    colorbar="#ffffe5,#fff7bc,#fee391,#fec44f,#fe9929,#ec7014,#cc4c02,#993404,#662506"
+    style="background:#000" 
+    textcolor="#eee"
+&gt;&lt;/div&gt;
+</pre>
+</div>
+</div>
+<!--end content-->
+</div>
+    </div>
+    
+    <div id="podaac-footer">
+      <ul id="podaac-footer-links">
+        <li class="first"><a target="_blank" href="http://www.jpl.nasa.gov/copyrights.cfm">PRIVACY</a></li>
+        <li class="last"><a target="_blank" href="http://www.jpl.nasa.gov/imagepolicy/">IMAGE POLICY</a></li>
+      </ul>
+      <ul id="podaac-site-info">
+        <li>Site Manager: <!-- PLACE SITE MANAGERS HERE !--></li>
+        <li>Webmasters: <!-- PLACE WEBMASTERS HERE !--></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

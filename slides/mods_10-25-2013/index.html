@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<title>PO.DAAC Webification (W10n)</title>
+	
+	<link href="podaac_assets/css/podaac.jpl-banner.css" type="text/css" rel="stylesheet" />
+	<link href="podaac_assets/css/podaac.template.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="js/local.css" />
+	<!-- Required stylesheet -->
+	<link rel="stylesheet" href="core/deck.core.css">
+	
+	<!-- Extension CSS files go here. Remove or add as needed. -->
+	<link rel="stylesheet" href="extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="extensions/status/deck.status.css">
+	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
+
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="themes/style/swiss.css">
+	<!-- <link rel="stylesheet" href="themes/style/neon.css"> -->
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="themes/transition/vertical-slide.css">
+	<script src="js/prettify.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="js/prettify.min.css" />
+	<link rel="stylesheet" type="text/css" href="js/sunburst.css" />
+	<!-- Required Modernizr file -->
+	<script src="js/modernizr.custom.js"></script>
+	<script data-main="//cds.jpl.nasa.gov/widgets/plot/0.9/js/main.js" src="//cds.jpl.nasa.gov/widgets/plot/0.9/components/requirejs/require.js"></script>
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#skipnav').hide();
+	})
+	</script>
+	
+</head>
+<body onload="prettyPrint();">
+<a id="skipnav" href="#maincontent">Follow this link to skip to the main content</a>
+<div id="podaac-header-container">
+  <header id="podaac-header" role="banner">
+    <div id="block-podaac-helper-podaac-jpl-banner" class="block block-podaac-helper first odd">
+
+  <div class="block-content">
+              
+    <div id="JPL-banner">
+  
+  <div id="JPL-home">
+    <a href="http://www.nasa.gov" id="JPL-NASA-link"><img src="podaac_assets/img/jpl-nasa-logo.png" width="70" height="70" alt="National Aeronautics &amp; Space Administration" title="National Aeronautics &amp; Space Administration" /></a>    
+    <a href="http://www.jpl.nasa.gov" id="JPL-home-link">Jet Propulsion Laboratory</a>    
+    <a href="http://www.caltech.edu/" id="JPL-caltech-link">California Institute of Technology</a>  </div>
+  
+  <div id="JPL-link-container">
+    <ul id="JPL-links"><li class="jpl-home first"><a href="http://www.jpl.nasa.gov/index.cfm">JPL Home</a></li>
+<li class="jpl-earth"><a href="http://www.jpl.nasa.gov/earth/index.cfm">Earth</a></li>
+<li class="jpl-solar-system"><a href="http://www.jpl.nasa.gov/solar-system/index.cfm">Solar System</a></li>
+<li class="jpl-stars-galaxy"><a href="http://www.jpl.nasa.gov/stars-galaxies/index.cfm">Stars &amp; Galaxies</a></li>
+<li class="jpl-science-tech last"><a href="http://scienceandtechnology.jpl.nasa.gov/">Science &amp; Technology</a></li>
+</ul>    
+    <div id="JPL-icon-container">
+      <span id="JPL-icon-slogan">Bring the Universe to You</span>
+      
+      <ul id="JPL-icons"><li class="jpl-mail first"><a href="http://www.jpl.nasa.gov/email/signup.cfm"><img src="podaac_assets/img/jpl-mail-icon.png" width="20" height="40" alt="JPL Email News" title="JPL Email News" /></a></li>
+<li class="jpl-facebook"><a href="http://www.facebook.com/NASAJPL"><img src="podaac_assets/img/jpl-facebook-icon.png" width="20" height="40" alt="JPL on Facebook" title="JPL on Facebook" /></a></li>
+<li class="jpl-twitter"><a href="http://twitter.com/NASAJPL"><img src="podaac_assets/img/jpl-twitter-icon.png" width="20" height="40" alt="JPL on Twitter" title="JPL on Twitter" /></a></li>
+<li class="jpl-gplus"><a href="http://plus.google.com/113315419190905475766/posts"><img src="podaac_assets/img/jpl-gplus-icon.png" width="20" height="40" alt="JPL on Google+" title="JPL on Google+" /></a></li>
+<li class="jpl-youtube"><a href="http://www.youtube.com/user/JPLnews"><img src="podaac_assets/img/jpl-youtube-icon.png" width="20" height="40" alt="JPL on YouTube" title="JPL on YouTube" /></a></li>
+<li class="jpl-itunes"><a href="http://itunes.apple.com/podcast/hd-nasas-jet-propulsion-laboratory/id262254981"><img src="podaac_assets/img/jpl-itunes-icon.png" width="20" height="40" alt="JPL on iTunes" title="JPL on iTunes" /></a></li>
+<li class="jpl-ustream"><a href="http://www.ustream.tv/nasajpl2"><img src="podaac_assets/img/jpl-ustream-icon.png" width="20" height="40" alt="Live Streaming Video" title="Live Streaming Video" /></a></li>
+<li class="jpl-rss"><a href="http://www.jpl.nasa.gov/rss/index.cfm"><img src="podaac_assets/img/jpl-rss-icon.png" width="20" height="40" alt="RSS" title="RSS" /></a></li>
+<li class="jpl-blog"><a href="http://blogs.jpl.nasa.gov/"><img src="podaac_assets/img/jpl-blog-icon.png" width="20" height="40" alt="JPL Blog" title="JPL Blog" /></a></li>
+<li class="jpl-mobile last"><a href="http://www.jpl.nasa.gov/onthego/"><img src="podaac_assets/img/jpl-mobile-icon.png" width="20" height="40" alt="JPL Mobile" title="JPL Mobile" /></a></li>
+</ul>    </div>
+  </div>
+  <div class="clearfix podaac-clear"></div>
+  
+</div><!-- /.JPL-banner -->
+
+  </div>
+
+</div><!-- /.block -->
+    <hgroup id="podaac-name-and-slogan">
+      <a href="http://podaac-w10n.jpl.nasa.gov/" title="Home" rel="home" id="podaac-logo"><img src="podaac_assets/img/logo.png" alt="Home" /></a>    </hgroup>
+    <img src="podaac_assets/img/satellite.png" alt="satellite logo" id="podaac-header-satellite" />
+    
+    <div class="podaac-clear"></div>
+  </header>
+  <img src="podaac_assets/img/header-banner.jpg" alt="podaac header banner" id="podaac-header-banner" />
+</div>
+
+<div id="podaac-main-container">
+  <div id="podaac-content-backdrop">
+    <div id="podaac-backdrop">
+      <div id="podaac-backdrop-gradient"></div>
+    </div>
+  </div>
+  
+  <div id="podaac-main">
+    <div id="podaac-navigation"></div>
+    <div class="podaac-clear"></div>
+    
+    <div id="podaac-content-container">
+      <div id="podaac-content">
+        <div id="podaac-page-content">
+<div class="deck-container dcembed">
+<!-- Begin slides. Just make elements with a class of slide. -->
+<a name="maincontent"></a>
+<section class="slide" id="intro">
+
+	<h2>Welcome to PO.DAAC Webification</h2>
+	<p>
+		PO.DAAC is pleased to offer a Webification (w10n) Service for all of our data archives.
+	</p>
+	<p>
+		By utilizing Webification, PO.DAAC gets access into a data granule via the web and the power of a well-formed URL. 
+	</p>
+	<p>
+	For instance, a request like this:
+	</p>
+	<blockquote>
+	http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2/<span class="identifier">sea_surface_temperature[0:1,0:2030:135,0:1354:135]</span><span class="queryString">?output=json</span>
+	</blockquote>
+	<p>
+	Yields a small subset of a netCDF file. 
+	</p>
+	<h4>With that said, you have a few choices:</h4>
+	<p>
+		<ul>
+			<li><a href="#whatis">See How Webification Works</a></li>
+			<li><a href="html5.html">See Webification in action (data visualization)</a></li>
+			<li><a href="http://podaac-w10n.jpl.nasa.gov/w10n/">Thats OK, Just let me explore the webified PO.DAAC Data (Basic Browser)</a></li>
+		</ul>
+	</p>
+
+</section>
+<section class="slide" id="whatis">
+	<!-- <h1>Slide</h1> -->
+	<!-- <div id="widgetxyz1" class="clickableWidget">clickme</div> -->
+	<h2>What is webification?</h2>
+
+<h3>Webification (w10n) is an enabling technology that simplifies use of large and complex science data, such as ones archived at PO.DAAC.</h3>
+
+<h3>The PO.DAAC W10n Service is established using Pomegranate, an open source software, that implements the current w10n specification and supports major Earth science data formats like NetCDF and HDF 4/5.</h3>
+
+<h3>W10n abstracts an arbitrary data store as a tree, in which two types of entities exist: node and leaf. A node can contain sub-nodes and leaves. A leaf holds data and is terminal. Both node and leaf can have attributes.</h3>
+
+</section>
+
+<section class="slide" id="restful-interface">
+	<h2>ReSTful Interface</h2>
+
+
+<h3>
+W10n uses meaningful URLs to locate inner components of a data store and make them directly accessible via HTTP/HTTPS in ReSTful way. 
+</h3>
+<h3>
+A w10n URL has a form as follows
+</h3>
+
+<pre>
+http://host:port/some_path/webifiable_store/identifier?queryString
+</pre>
+
+<h3>And to that effect, an array of measurements returned in JSON format</h3>
+<pre>
+http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2/<span class="identifier">sea_surface_temperature[0:1,0:20:2,30:40:4]</span><span class="queryString">?output=json</span>
+</pre>
+</section>
+	
+<section class="slide" id="metadata-requests">
+	<h2>Metadata Requests</h2>
+	<h3>Ending an identifier with a slash '/' e.g., /sea_surface_temperature/ will expose the metadata of the node or leaf.</h3>
+<pre>
+http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2/<span class="identifier">sea_surface_temperature/</span>
+</pre>
+<p>JSON is the default format of a response. More on format in a moment...</p>
+
+</section>
+<section class="slide" id="data-requests">
+	<h2>Data Requests</h2>
+	<h3>An Identifier ending with an enclosing square-bracket pair '[...]' will generate a data response.</h3>
+<pre>
+http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2/<span class="identifier">sea_surface_temperature[0:1,0:20:2,30:40:4]</span>
+</pre>
+
+</section>
+<section class="slide" id="response-format">
+	<h2>Response Format</h2>
+	<h3>
+	the queryString '?' indicates how the access should be done, such as, in what output format data of a leaf should be returned.
+	</h3>
+	<p>
+	By default, meta info is returned in JSON format.
+	</p>
+<p>Example: an array of measurements returned in JSON format</p>
+<pre>
+http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2/<span class="identifier">sea_surface_temperature[0:1,0:20:2,30:40:4]</span><span class="queryString">?output=json</span>
+</pre>
+<!-- <p>Or a HTML view of metadata about the measurements</p>
+<pre>
+http://host.org/dataStore/sea_surface_temperature/?output=html
+</pre> -->
+<ul>
+Options:
+<li>?output=json => A JSON object</li>
+<li>?output=html => Simple HTML Browse Interface (great for metadata exploration)</li>
+<li>?output=nc => netCDF</li>
+<li>?output=be => big endian</li>
+<li>?output=le => little endian</li>
+</ul>
+</section>
+<section class="slide" id="examples-1">
+<h2>URL Examples I</h2>
+<p>
+All NetCDF and HDF 4/5 files are webified, including compressed ones.
+</p>
+
+
+
+<p>
+Take a level 2P MODIS_A granule as an example:
+</p>
+<p>
+<a>http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2</a>
+</p>
+<p>
+It is a compressed NetCDF file (around 20+MB in size). Its attributes and data arrays can be accessed using w10n URLs as follows,
+</p>
+<a target="_blank" class="w10n" href="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2/?output=json.indented">http://.../20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2<span class="identifier">/</span></a>
+<p>
+This particular URL returns top meta info in JSON, which contains global attributes and a list of available data arrays, including sea_surface_temperature
+</p>
+<p>
+And for the human eye's sake:
+</p>
+<a target="_blank" class="w10n" href="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2/?output=html">http://.../20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2<span class="identifier">/</span><span class="queryString">?output=html</span></a>
+<p>
+will return the same top meta info as above, but in HTML.
+</p>
+</section>
+<section class="slide" id="examples-2">
+<h2>URL Examples II</h2>
+<a target="_blank" class="w10n" href="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2/sea_surface_temperature/?output=json.indented">http://.../20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2<span class="identifier">/sea_surface_temperature/</span></a>
+<p>
+returns meta info of <em>sea_surface_temperature</em> in JSON, which contains data type, array shape and associated attributes.
+</p>
+
+<a target="_blank"class="w10n" href="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2/sea_surface_temperature[]?output=nc">http://.../20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2<span class="identifier">/sea_surface_temperature[]</span><span class="queryString">?output=nc</span></a>
+<p>
+returns the entire <em>sea_surface_temperature</em> array in NetCDF.
+Or in JSON, big/little-endian binary if <em class="queryString">output</em> is set to json, be or le.
+</p>
+<a target="_blank"class="w10n" href="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2/sea_surface_temperature[0:1,0:15,0:10]?output=json">http://.../20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2<span class="identifier">/sea_surface_temperature[0:1,0:15,0:10]</span><span class="queryString">?output=json</span></a>
+<p>
+returns a slice of array <em>sea_surface_temperature</em> in JSON.
+</p>
+
+<a target="_blank" class="w10n" href="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2/sea_surface_temperature[0:1,0:2030:135,0:1354:135]?output=json">http://.../20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2<span class="identifier">/sea_surface_temperature[0:1,0:2030:135,0:1354:135]</span><span class="queryString">?output=json</span></a>
+<p>
+returns a subset of array <em>sea_surface_temperature</em> in JSON using a step indexer. In this case, every 135th value.
+</p>
+</section>
+<section class="slide" id="browse-interface">
+<h2>The Browse Interface</h2>
+<p>
+The HTML view provided by ?output=html is a human-friendly browsable interface, which presents all URLs above on a single web page that one can interact with, e.g.,
+</p>
+<pre>
+http://.../20130617-MODIS_A-JPL-L2P-A2013168000000.L2_LAC_GHRSST_D-v01.nc.bz2/?output=html
+</pre>
+<p>
+This interface is available to every webified file and is accessible through a folder icon <img src="http://scifari.org/icons/folder.gif" alt="folder icon" style="display:inline; margin:0;"/> at the rightest column called "webifiable" on each directory listing page, such as
+<a href="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/" target="_blank">
+http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2013/168/
+</a>
+</p>
+
+<p>
+The entry URL for our w10n service with this interface is:
+<a href="http://podaac-w10n.jpl.nasa.gov/w10n/" target="_blank">http://podaac-w10n.jpl.nasa.gov/w10n/</a>
+</p>
+
+</section>
+
+<section class="slide" id="clients">
+<h2>Clients</h2>
+<p>
+Since all inner components of a data file are directly accessible via
+URLs, any programming language or computing environment, capable of URL/HTTP calling, can be used to consume webified data without the need of extra library support.
+</p>
+
+<!-- <p>
+Please check this
+<a href="http://scifari.org/client/example.html">link [http://scifari.org/client/example.html]</a>
+for a list of examples in various programming languages and environments.
+</p> -->
+
+<p>
+Some more complete examples in python and matlab are available at
+<a href="http://pomegranate.nasa.gov/client/">http://pomegranate.nasa.gov/client/</a>
+</p>
+
+<h3 class="however">
+However, the most interesting and powerful examples of webified data
+come from the brave new world of HTML5. 
+</h3>
+<p>
+We have assembled some widgets to visualize PO.DAAC data in the browser using the latest and greatest in JavaScript visualization libraries such as d3.js and Three.js.</p>
+<p>
+Please visit this
+<a href="./html5.html">here</a> to see PO.DAAC data
+in action. <em>A browser that supports webGL is required
+for 3D visualization, such as Google
+<a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>
+and Safari, and Chrome is preferred for its speed.</em>
+</p>
+</section>
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<p class="slideOptions">
+	Press &quot;m&quot; to see all slides, use arrows for previous/next
+</p>
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+</div>
+<!--end content-->
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="podaac-footer">
+	<a id="backhome" href="http://podaac.jpl.nasa.gov/podaac_labs">Back to PO.DAAC Labs Home</a>
+	<a id="backhome" href="./">Back to PO.DAAC Webification Home</a>
+
+	<div class="info">
+		<span>Site Manager: Thomas Huang</span>
+		<span>Webmaster: Thomas Huang</span>
+		<a class="policy" href="http://www.jpl.nasa.gov/copyrights.cfm">Privacy Policy</a>
+		<a class="policy" href="http://www.jpl.nasa.gov/imagepolicy/">Image Policy</a>
+	</div>
+</div>
+<!-- Required JS files. -->
+
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="core/deck.core.js"></script>
+<script src="extensions/hash/deck.hash.js"></script>
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+/*
+w10n widget deployment
+assembled by Alexander Smith, author of plot widget riffraff
+Alexander.Smith@jpl.nasa.gov
+check ./html5.html for the demos/etc...
+*/
+	/*$(function() {
+		$.deck('.slide');
+	});*/
+$(document).ready(function(){
+		$.deck('.slide');
+		
+	})
+</script>
+</body>
+</html>

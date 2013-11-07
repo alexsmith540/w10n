@@ -1,0 +1,454 @@
+/**
+ * Layout
+ */
+html {
+  background: #000;
+  font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-size: 13px;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+#podaac-header-container {
+  position: relative;
+  overflow: hidden;
+}
+#podaac-header {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  _display: inline;
+  _overflow: hidden;
+  _overflow-y: visible;
+}
+#podaac-header, #podaac-main, #podaac-footer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 970px;
+}
+.podaac-clear {
+  clear: both;
+  height: 0;
+}
+
+/**
+ * JPL Header
+ */
+#block-podaac-helper-podaac-jpl-banner {
+  font-size: 13px;
+  line-height: 1.5em;
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/**
+ * PODAAC Header
+ */
+#podaac-header {
+  position: relative;
+  z-index: 10;
+  padding: 0 10px 25px 10px;
+}
+#podaac-header-banner {
+  position: absolute;
+  bottom: 0;
+  width: 1500px;
+  height: 195px;
+  min-width: 1500px;
+  max-width: none;
+  left: 50%;
+  margin-left: -750px;
+}
+#podaac-name-and-slogan {
+  position: relative;
+  z-index: 20;
+  float: left;
+  width: 400px;
+  clear: both;
+}
+#podaac-logo img {
+  vertical-align: bottom;
+  width: 320px;
+  height: 70px;
+}
+#podaac-header-satellite {
+  position: absolute;
+  z-index: 15;
+  bottom: 10px;
+  right: 10px;
+  width: 40%;
+  height: auto;
+  min-width: 350px;
+}
+
+/**
+ * PODAAC Navigation
+ */
+#podaac-navigation {
+  padding: 3px 10px 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  _display: inline;
+  _overflow: hidden;
+  _overflow-y: visible;
+}
+#podaac-navigation a {
+  text-decoration: none;
+}
+#podaac-navigation li,
+#podaac-navigation li.active {
+  background: transparent;
+  text-align: center;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+#podaac-navigation a {
+  color: #3977af;
+  font-size: 1em;
+}
+#podaac-navigation a:hover,
+#podaac-navigation a:active,
+#podaac-navigation li.active a {
+  color: #000;
+}
+#secondary-menu {
+  display: none;
+  float: right; /* LTR */
+}
+#podaac-navigation .block {
+  margin-bottom: 0;
+}
+#podaac-navigation .block-menu .block-title,
+#podaac-navigation .block-menu-block .block-title {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+#podaac-navigation ul.links, /* Main menu and secondary menu links */
+#podaac-navigation ul.menu { /* Menu block links */
+  margin: 0;
+  padding: 0;
+  text-align: left; /* LTR */
+}
+#podaac-navigation ul.menu {
+  z-index: 20;
+}
+#podaac-navigation ul.menu li { /* A simple method to get navigation links to appear in one line. */
+  float: left; /* LTR */
+  padding: 5px 1% 0 1%; /* LTR */
+  list-style-type: none;
+  list-style-image: none;
+}
+#podaac-navigation ul ul {
+  display: none;
+}
+#podaac-navigation ul li.expanded:hover {
+  background: #2c5180;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#podaac-navigation ul li.expanded:hover a {
+  color: #fff;
+}
+#podaac-navigation ul li.expanded:hover > ul {
+  display: block;
+  position: absolute;
+  z-index: 25;
+  width: 100%;
+  left: 0;
+  background: #2c5180;
+  color: #fff;
+  margin-right: 10px;
+  border-bottom: 1px solid #1a345e;
+  -webkit-box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5);
+  box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5);
+  height: 30px;
+} 
+#podaac-navigation ul.menu li.expanded li {
+  margin-left: 10px;
+  padding: 0 1%;
+  line-height: 30px;
+}
+#podaac-navigation ul.menu ul.menu ul.menu {
+  width: auto;
+  background: #1a345e;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+#podaac-navigation ul.menu ul.menu ul.menu li {
+  margin-right: 10px;
+}
+
+/**
+ * Media Queries for Navigation
+ */
+@media all and (min-width: 480px) and (max-width: 750px) {
+  #podaac-navigation ul.menu li {
+    width: 20%;
+  }
+  #podaac-navigation ul.menu li li {
+    width: auto;
+  }
+}
+
+@media all and (max-width: 479px) {
+  #podaac-navigation {
+    padding-top: 10px;
+  }
+  #podaac-navigation ul.menu {
+    height: auto;
+  }
+  #podaac-navigation ul.menu li {
+    width: auto;
+    text-align: left;
+    float: none;
+    display: block;
+    font-size: 0.9em;
+    border-top: 1px solid #5874a2;
+    padding: 5px;
+    cursor: pointer;
+  }
+  #podaac-navigation ul.menu li li.first {
+    border-top: none;
+  }
+  #podaac-navigation .block-menu-block {
+    background: #2c5180;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.7);
+  }
+  #podaac-navigation a {
+    color: #fff;
+  }
+  #podaac-navigation a:hover,
+  #podaac-navigation a:active,
+  #podaac-navigation ul.menu li:hover > a,
+  #podaac-navigation ul.menu li:active > a,
+  #podaac-navigation ul.menu li.active > a {
+    color: #b2c7e9 !important;
+  }
+  #podaac-navigation ul li.expanded:hover {
+    background: transparent;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  #podaac-navigation ul li.expanded:hover > ul {
+    position: relative;
+    width: auto;
+    background: transparent;
+    margin-right: 0;
+    border-bottom: none;
+    height: auto;
+    padding-left: 20px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  #podaac-navigation ul.menu ul.menu ul.menu {
+    border-top: 1px dotted #5874a2;
+    background: transparent;
+    display: block !important;
+    padding-left: 20px;
+  }
+  #podaac-navigation ul.menu ul.menu ul.menu li {
+    font-size: 1em !important;
+  }
+  #podaac-navigation ul.menu li.expanded li {
+    margin-left: 0;
+    padding: 0;
+    line-height: 2.5em;
+  }
+  #podaac-navigation .block-menu-block .block-title {
+    position: relative !important;
+    height: auto;
+    width: auto;
+    clip: auto;
+    margin: 0;
+    padding-left: 10px;
+    font-size: 1.2em;
+    line-height: 2.5em;
+    font-weight: normal;
+    cursor: pointer;
+  }
+  #podaac-navigation .block-menu-block .block-title:hover {
+    color: #b2c7e9;
+  }
+}
+
+
+/**
+ * PODAAC Body
+ */
+#podaac-content-backdrop {
+  position: absolute;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#podaac-backdrop {
+  background: #162b48;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 1px solid #1f3c62;
+}
+#podaac-backdrop-gradient {
+}
+#podaac-main-container {
+  position: relative;
+  top: -15px;
+}
+#podaac-main {
+  position: relative;
+  z-index: 10;
+  background-color: #c7dcf6;
+  background: -moz-linear-gradient(top, #c7dcf6 0%, #94b5e0 100%); 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c7dcf6), color-stop(100%,#94b5e0));
+  background: -webkit-linear-gradient(top, #c7dcf6 0%,#94b5e0 100%);
+  background: -o-linear-gradient(top, #c7dcf6 0%,#94b5e0 100%);
+  background: -ms-linear-gradient(top, #c7dcf6 0%,#94b5e0 100%);
+  background: linear-gradient(to bottom, #c7dcf6 0%,#94b5e0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7dcf6', endColorstr='#94b5e0',GradientType=0 );
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+}
+#podaac-content-container {
+  padding: 10px;
+}
+#podaac-content {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #5978a0;
+  background: #fff;
+  padding: 10px;
+}
+#podaac-page-title {
+  font-weight: bold;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/**
+ * Header Responsive Design
+ */
+@media all and (min-width: 480px) and (max-width: 750px) {
+  #podaac-header-satellite {
+    opacity: 0.7;
+  }
+}
+@media all and (max-width: 479px) {
+  #podaac-header-satellite {
+    opacity: 0.4;
+  }
+}
+
+/**
+ * PODAAC Footer
+ */
+#podaac-footer #block-menu-block-2 {
+  float: right;
+}
+#podaac-footer .menu-name-menu-footer-menu ul,
+#podaac-footer .menu-name-menu-footer-menu li {
+  list-style: none;
+}
+#podaac-footer .menu-name-menu-footer-menu ul {
+  padding: 0;
+  margin: 0;
+}
+#podaac-footer .menu-name-menu-footer-menu li {
+  float: left;
+  margin-right: 10px;
+}
+#podaac-footer .menu-name-menu-footer-menu a {
+  padding-right: 10px;
+  border-right: 1px solid #6ba5d9;
+  color: #6ba5d9;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+#podaac-footer .menu-name-menu-footer-menu a:hover {
+  color: #fff;
+}
+#podaac-footer .menu-name-menu-footer-menu .last a {
+  padding-right: 0;
+  border-right: none;
+}
+
+/**
+ * Media Queries for PODAAC Footer
+ */
+@media all and (max-width: 479px) {
+  #podaac-footer #block-menu-block-2 {
+    float: none;
+  }
+  #podaac-footer .menu-name-menu-footer-menu {
+    background: #87a2c5;
+  }
+  #podaac-footer .menu-name-menu-footer-menu li {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #podaac-footer .menu-name-menu-footer-menu a {
+    display: block;
+    border: none;
+    padding-right: 0;
+    color: #1a345e;
+    padding: 5px 10px;
+    border-top: 1px solid #b2c7e9;
+    border-bottom: 1px solid #5874a2;
+  }
+  #podaac-footer .menu-name-menu-footer-menu a:hover,
+  #podaac-footer .menu-name-menu-footer-menu a:active {
+    color: #000;
+    background: #d7a464;
+    border-top: 1px solid #edd58d;
+    border-bottom: 1px solid #cf9331;
+  }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<title>PO.DAAC Webification (W10n)</title>
+	
+	<link href="http://podaac-w10n.jpl.nasa.gov/tutorial/podaac_assets/css/podaac.jpl-banner.css" type="text/css" rel="stylesheet" />
+	<link href="http://podaac-w10n.jpl.nasa.gov/tutorial/podaac_assets/css/podaac.template.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="http://podaac-w10n.jpl.nasa.gov/tutorial/js/local.css" />
+	<!-- Required stylesheet -->
+	<link rel="stylesheet" href="http://podaac-w10n.jpl.nasa.gov/tutorial/core/deck.core.css">
+	
+	<link rel="stylesheet" href="http://podaac-w10n.jpl.nasa.gov/tutorial/themes/style/swiss.css">
+	
+	<script src="http://podaac-w10n.jpl.nasa.gov/tutorial/js/modernizr.custom.js"></script>
+	
+	<script src="http://podaac-w10n.jpl.nasa.gov/tutorial/js/jquery-1.7.2.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#skipnav').hide();
+	})
+	</script>
+	<style>
+	.dcembed{
+		height:auto !important;
+	}
+	#backhome{
+		color: #ddd;
+	}
+	.policy{
+		display: block;
+		float: left;
+		color: #ccc;
+		margin: 0 15px 0 0;
+		font-size: 10px;
+		text-decoration: none;
+	}
+	</style>
+</head>
+<body>
+<a id="skipnav" href="#maincontent">Follow this link to skip to the main content</a>
+<div id="podaac-header-container">
+  <header id="podaac-header" role="banner">
+    <div id="block-podaac-helper-podaac-jpl-banner" class="block block-podaac-helper first odd">
+
+  <div class="block-content">
+              
+    <div id="JPL-banner">
+  
+  <div id="JPL-home">
+    <a href="http://www.nasa.gov" id="JPL-NASA-link"><img src="podaac_assets/img/jpl-nasa-logo.png" width="70" height="70" alt="National Aeronautics &amp; Space Administration" title="National Aeronautics &amp; Space Administration" /></a>    
+    <a href="http://www.jpl.nasa.gov" id="JPL-home-link">Jet Propulsion Laboratory</a>    
+    <a href="http://www.caltech.edu/" id="JPL-caltech-link">California Institute of Technology</a>  </div>
+  
+  <div id="JPL-link-container">
+    <ul id="JPL-links"><li class="jpl-home first"><a href="http://www.jpl.nasa.gov/index.cfm">JPL Home</a></li>
+<li class="jpl-earth"><a href="http://www.jpl.nasa.gov/earth/index.cfm">Earth</a></li>
+<li class="jpl-solar-system"><a href="http://www.jpl.nasa.gov/solar-system/index.cfm">Solar System</a></li>
+<li class="jpl-stars-galaxy"><a href="http://www.jpl.nasa.gov/stars-galaxies/index.cfm">Stars &amp; Galaxies</a></li>
+<li class="jpl-science-tech last"><a href="http://scienceandtechnology.jpl.nasa.gov/">Science &amp; Technology</a></li>
+</ul>    
+    <div id="JPL-icon-container">
+      <span id="JPL-icon-slogan">Bring the Universe to You</span>
+      
+      <ul id="JPL-icons"><li class="jpl-mail first"><a href="http://www.jpl.nasa.gov/email/signup.cfm"><img src="podaac_assets/img/jpl-mail-icon.png" width="20" height="40" alt="JPL Email News" title="JPL Email News" /></a></li>
+<li class="jpl-facebook"><a href="http://www.facebook.com/NASAJPL"><img src="http://podaac-w10n.jpl.nasa.gov/tutorial/podaac_assets/img/jpl-facebook-icon.png" width="20" height="40" alt="JPL on Facebook" title="JPL on Facebook" /></a></li>
+<li class="jpl-twitter"><a href="http://twitter.com/NASAJPL"><img src="http://podaac-w10n.jpl.nasa.gov/tutorial/podaac_assets/img/jpl-twitter-icon.png" width="20" height="40" alt="JPL on Twitter" title="JPL on Twitter" /></a></li>
+<li class="jpl-gplus"><a href="http://plus.google.com/113315419190905475766/posts"><img src="podaac_assets/img/jpl-gplus-icon.png" width="20" height="40" alt="JPL on Google+" title="JPL on Google+" /></a></li>
+<li class="jpl-youtube"><a href="http://www.youtube.com/user/JPLnews"><img src="http://podaac-w10n.jpl.nasa.gov/tutorial/podaac_assets/img/jpl-youtube-icon.png" width="20" height="40" alt="JPL on YouTube" title="JPL on YouTube" /></a></li>
+<li class="jpl-itunes"><a href="http://itunes.apple.com/podcast/hd-nasas-jet-propulsion-laboratory/id262254981"><img src="http://podaac-w10n.jpl.nasa.gov/tutorial/podaac_assets/img/jpl-itunes-icon.png" width="20" height="40" alt="JPL on iTunes" title="JPL on iTunes" /></a></li>
+<li class="jpl-ustream"><a href="http://www.ustream.tv/nasajpl2"><img src="http://podaac-w10n.jpl.nasa.gov/tutorial/podaac_assets/img/jpl-ustream-icon.png" width="20" height="40" alt="Live Streaming Video" title="Live Streaming Video" /></a></li>
+<li class="jpl-rss"><a href="http://www.jpl.nasa.gov/rss/index.cfm"><img src="http://podaac-w10n.jpl.nasa.gov/tutorial/podaac_assets/img/jpl-rss-icon.png" width="20" height="40" alt="RSS" title="RSS" /></a></li>
+<li class="jpl-blog"><a href="http://blogs.jpl.nasa.gov/"><img src="http://podaac-w10n.jpl.nasa.gov/tutorial/podaac_assets/img/jpl-blog-icon.png" width="20" height="40" alt="JPL Blog" title="JPL Blog" /></a></li>
+<li class="jpl-mobile last"><a href="http://www.jpl.nasa.gov/onthego/"><img src="http://podaac-w10n.jpl.nasa.gov/tutorial/podaac_assets/img/jpl-mobile-icon.png" width="20" height="40" alt="JPL Mobile" title="JPL Mobile" /></a></li>
+</ul>    </div>
+  </div>
+  <div class="clearfix podaac-clear"></div>
+  
+</div><!-- /.JPL-banner -->
+
+  </div>
+
+</div><!-- /.block -->
+    <hgroup id="podaac-name-and-slogan">
+      <a href="http://podaac.jpl.nasa.gov/podaac_labs" title="Home" rel="home" id="podaac-logo"><img src="http://podaac-w10n.jpl.nasa.gov/tutorial/podaac_assets/img/logo.png" alt="Home" /></a>    </hgroup>
+    <img src="http://podaac-w10n.jpl.nasa.gov/tutorial/podaac_assets/img/satellite.png" alt="satellite logo" id="podaac-header-satellite" />
+    
+    <div class="podaac-clear"></div>
+  </header>
+  <img src="http://podaac-w10n.jpl.nasa.gov/tutorial/podaac_assets/img/header-banner.jpg" alt="podaac header banner" id="podaac-header-banner" />
+</div>
+
+<div id="podaac-main-container">
+  <div id="podaac-content-backdrop">
+    <div id="podaac-backdrop">
+      <div id="podaac-backdrop-gradient"></div>
+    </div>
+  </div>
+  
+  <div id="podaac-main">
+    <div id="podaac-navigation"></div>
+    <div class="podaac-clear"></div>
+    
+    <div id="podaac-content-container">
+      <div id="podaac-content">
+        <div id="podaac-page-content">
+<div class="dcembed">
+<!-- Begin content -->
+<a name="maincontent"></a>
+
+<!-- PLACE CONTENT HERE !-->
+
+<!--END CONTENT-->
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="podaac-footer">
+	<a id="backhome" href="http://podaac.jpl.nasa.gov/podaac_labs">Back to PO.DAAC Labs Home</a>
+	<a id="backhome" href="./">Back to PO.DAAC Webification Home</a>
+	<div class="info">
+		<span>Site Manager: Thomas Huang</span>
+		<span>Webmaster: Thomas Huang</span>
+		<a class="policy" href="http://www.jpl.nasa.gov/copyrights.cfm">Privacy Policy</a>
+		<a class="policy" href="http://www.jpl.nasa.gov/imagepolicy/">Image Policy</a>
+	</div>
+</div>
+</body>
+</html>
