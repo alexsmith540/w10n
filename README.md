@@ -10,6 +10,7 @@ From [here](http://reinvent.awsevents.com/hackathon.html):
 
 ### Getting Started
 1, Explore the interactive tutorial [here](http://podaac-w10n.jpl.nasa.gov/tutorial/#examples-1)
+
 2, Test our our live API here:
 
 ```bash
@@ -30,19 +31,39 @@ http.get("http://xxxxx.json", function(res) {
 })
 ```
 
-3, Spin up your own AMI (ID: ami-fc0f97cc ) with w10n pre-configured
+3, Spin up your own AMI (ID: ami-fc0f97cc in US-West-2 ) with w10n pre-configured.
+Notes:
+* Suggested instance type: m1.medium
+* Security Group should allow inboud traffic from only ports 22 & 80
 
-4,  
 
-5, Get in touch with us (Alex Smith or Rob Witoff) and Hack something masterful!
+4, SSH into your instance
+```bash
+#log into the machine you just spun up
+> ssh -i <your ssh key.pem> ubuntu@<address of the machine you just created>
+
+# Configure this new w10n server to use port 80
+ubuntu$ sudo ./taiga/taiga-1.6.6-linux-x86_64-b/bin/taiga-service config -p 80 -d /vol/data
+
+# Start your server
+ubuntu$ sudo ./taiga/taiga-1.6.6-linux-x86_64-b/bin/taiga-service start
+
+# Verify that your server is running & logout
+ubuntu$ curl localhost
+ubuntu$ exit
+
+## Now point your browser to the <address of the machine you just created> and interact with your favorite API!
+```
+
+5, Hack something masterful!  And/or get in touch with us (Alex Smith or Rob Witoff).
 
 
 ### AWS Resources
 n.b. All resources are located in the Oregon us-west-2 AWS Region
 * **AMI**: Pre-built machine images
-  * 
+  * ami-fc0f97cc: Pre-packaged volume snapshots and configured machine.
 * **EBS**: Ready-to-go filesystems
-  * Earth Science Data
+  * snap-42c7797d: All the below earth science data
 * **S3**: Data [Bucket](https://s3-us-west-2.amazonaws.com/w10n)
  * Grace Land [data](https://s3-us-west-2.amazonaws.com/w10n/grace-land.nc)
  * Grace Ocean [data](https://s3-us-west-2.amazonaws.com/w10n/grace-ocean.nc)
@@ -63,10 +84,6 @@ Resources:
 * [w10n homepage](http://scifari.org/taiga/)
 * [w10n tutorial](http://podaac-w10n.jpl.nasa.gov/tutorial/)
 * [re:Invent homepage](http://reinvent.awsevents.com/hackathon.html)
-
-Sponsors:
-* NASA AMMOS
-* NASA MMIPL
 
 Developers
 * Zhangfan Xing
