@@ -6,15 +6,15 @@ w10n is all about deriving data positionally from numeric arrays. I cannot just 
 
 will take you to an HTML page which you can quickly browse a given data file and all associated metadata.
 
-##Within our data file, we see 3 "Dimensions" (nested dimensional numeric arrays) that would aide us in visualizing some data.
+###Within our data file, we see 3 "Dimensions" (nested dimensional numeric arrays) that would aide us in visualizing some data.
 
-###COADSX (180 values of longitude) [0:180]
+####COADSX (180 values of longitude) [0:180]
 
-###COADSY (90 values of latitude) [0:90]
+####COADSY (90 values of latitude) [0:90]
 
-###SST (sea suface temperature values) [0:1,0:90,0:180]
+####SST (sea suface temperature values) [0:1,0:90,0:180]
 
-##Did you notice this?
+###Did you notice this?
 ``` [0:12,0:90,0:180] ```
 
 The brackets are what we use to subset within our array.
