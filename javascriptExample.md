@@ -1,4 +1,6 @@
-```http://scifari.org/test/data/nc/coads_climatology.nc/?output=html```
+
+``` http://scifari.org/test/data/nc/coads_climatology.nc/?output=html ```
+
 will take you to an HTML page which you can quickly browse a given data file and all associated metadata.
 
 w10n is all about deriving data positionally from numeric arrays. I cannot just specify a file, a geographic area, and measurement types and expect to get back processed data. The deriving / correlating are all up to you.
