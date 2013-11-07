@@ -30,7 +30,7 @@ http.get("http://xxxxx.json", function(res) {
 })
 ```
 
-3, Spin up your own AMI with w10n pre-configured
+3, Spin up your own AMI (ID: ami-fc0f97cc ) with w10n pre-configured
 
 4,  
 
@@ -69,7 +69,7 @@ Sponsors:
 * NASA MMIPL
 
 Developers
-* Zhong Fang
+* Zhangfan Xing
 * Alex Smith
 * Jeremy Arca
 * And many more...
