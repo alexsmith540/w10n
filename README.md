@@ -68,10 +68,10 @@ n.b. All resources are located in the Oregon us-west-2 AWS Region
 * **EBS**: Ready-to-go filesystems
   * snap-42c7797d: All the below earth science data
 * **S3**: Data [Bucket](https://s3-us-west-2.amazonaws.com/w10n)
- * Grace Land [data](https://s3-us-west-2.amazonaws.com/w10n/grace-land.nc)
- * Grace Ocean [data](https://s3-us-west-2.amazonaws.com/w10n/grace-ocean.nc)
- * Modis [data](https://s3-us-west-2.amazonaws.com/w10n/modis.nc)
- * Oscar [data](https://s3-us-west-2.amazonaws.com/w10n/oscar.nc)
+ * Grace Land [data](https://s3-us-west-2.amazonaws.com/w10n/grace-land.nc) [29.9 MB]
+ * Grace Ocean [data](https://s3-us-west-2.amazonaws.com/w10n/grace-ocean.nc) [30.4 MB]
+ * Modis [data](https://s3-us-west-2.amazonaws.com/w10n/modis.nc) [568.5 MB]
+ * Oscar [data](https://s3-us-west-2.amazonaws.com/w10n/oscar.nc) [55.5 MB]
  * *Expert Data Bucket [here](https://s3-us-west-2.amazonaws.com/w10n-full)*
 
   
