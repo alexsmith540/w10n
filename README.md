@@ -72,7 +72,7 @@ n.b. All resources are located in the Oregon us-west-2 AWS Region
  * Grace Ocean [data](https://s3-us-west-2.amazonaws.com/w10n/grace-ocean.nc) [30.4 MB]
  * Modis [data](https://s3-us-west-2.amazonaws.com/w10n/modis.nc) [568.5 MB]
  * Oscar [data](https://s3-us-west-2.amazonaws.com/w10n/oscar.nc) [55.5 MB]
- * *Expert Data Bucket [here](https://s3-us-west-2.amazonaws.com/w10n-full)*
+ * *Expert Data Bucket [here](https://s3-us-west-2.amazonaws.com/w10n-full)* [~100 GB]
 
   
 ### Background Mission Data:
