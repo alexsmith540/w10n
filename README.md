@@ -58,7 +58,9 @@ ubuntu$ exit
 ## Now point your browser to the <address of the machine you just created> and interact with your favorite API!
 ```
 
-5, Hack something masterful!  And/or get in touch with us (Alex Smith or Rob Witoff).
+5, Hack something masterful!  And/or get in touch with us (Alex Smith or Rob Witoff):
+* Realtime Collaborative Q&A with the developers [here](https://w10nreinvent.hackpad.com/)
+* Google Hangouts with the developers [here](Alexander.Smith@jpl.nasa.gov)
 
 
 ### AWS Resources
