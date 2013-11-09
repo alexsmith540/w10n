@@ -33,7 +33,7 @@ http.get("http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?outpu
   res.on("data", function(chunk) {
     console.log("data: " + chunk);
   });
-})
+});
 ```
 
 3, Spin up your own AMI (ID: ami-fc0f97cc in US-West-2 ) with w10n pre-configured.
