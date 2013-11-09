@@ -1,10 +1,10 @@
 ## NASA's Webification
-All of NASA's science data is available to the public.  Webification (w10n) is an open source NASA data access framework that enables developers to easily access data in web-friendly formats for visualiztions like this:
+All of NASA's science data is available to the public.  Webification (w10n) is an open source NASA data access framework that enables developers to easily access data in web-friendly formats for visualizations like this:
 
 
 <img src="https://raw.github.com/witoff/w10n/master/media/viz.png" width="400px;" alt="Challenge Text" style="width: 100px;height:50px;"/>
 
-Webificaion simplifies use of the large and often complex data files published by NASA's Distributed Active Archive Centers, like [PO.DAAC](http://podaac.jpl.nasa.gov/).  The PO.DAAC w10n Service is open source software, that bridges the gap between Earth science data formats like NetCDF, HDF4 & HDF5 to JSON and XML.
+Webification simplifies use of the large and often complex data files published by NASA's Distributed Active Archive Centers, like [PO.DAAC](http://podaac.jpl.nasa.gov/).  The PO.DAAC w10n Service is open source software, that bridges the gap between Earth science data formats like NetCDF, HDF4 & HDF5 to JSON and XML.
 
 ### Re:Invent Challenge
 From [here](http://reinvent.awsevents.com/hackathon.html):
