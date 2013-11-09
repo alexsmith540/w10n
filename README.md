@@ -30,7 +30,9 @@ requests.get('http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?o
 ```javascript
 // Javascript
 http.get("http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?output=json", function(res) {
-  console.log("w10n response: " + res.statusCode);
+  res.on("data", function(chunk) {
+    console.log("data: " + chunk);
+  });
 })
 ```
 
