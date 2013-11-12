@@ -57,6 +57,8 @@ http.get("http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat[0:100]
 Notes:
 * Suggested instance type: m1.medium
 * Security Group should allow inboud traffic from only ports 22 & 80
+* Setup your own server simply by downloading & unzipping this API:
+  * https://s3-us-west-2.amazonaws.com/w10n/taiga-1.6.6-linux-x86_64-b.tar.gz
 
 
 4, SSH into your instance
