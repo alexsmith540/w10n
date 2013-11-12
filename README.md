@@ -53,7 +53,7 @@ http.get("http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat[0:100]
 });
 ```
 
-3, Spin up your own AMI (ID: ami-fc0f97cc in US-West-2 ) with w10n pre-configured.
+3, Spin up your own AMI (ID: ami-5cf56e6c in US-West-2 ) with w10n pre-configured.
 Notes:
 * Suggested instance type: m1.medium
 * Security Group should allow inboud traffic from only ports 22 & 80
