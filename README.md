@@ -53,7 +53,7 @@ http.get("http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat[0:100]
 });
 ```
 
-3, Spin up a webification machine of your own (AMI ID: ami-3eef740e, named: 'w10n-reinvent' in US-West-2 ) with w10n pre-configured.
+3, Spin up a webification machine of your own (AMI ID: ami-40e07b70, named: 'w10n-reinvent-gold' in US-West-2 ) with w10n pre-configured.
 Notes:
 * Suggested instance type: m1.medium
 * Security Group should allow inboud traffic from only ports 22 & 80
@@ -67,7 +67,7 @@ Notes:
 > ssh -i <your ssh key.pem> ubuntu@<address of the machine you just created>
 
 # Configure this new w10n server to use port 80
-ubuntu$ sudo ./taiga/taiga-1.6.6-linux-x86_64-b/bin/taiga-service config -p 80 -d /vol/data
+ubuntu$ sudo ./taiga/taiga-1.6.6-linux-x86_64-b/bin/taiga-service config -p 80 -d /w10nVol/data/
 
 # Start your server
 ubuntu$ sudo ./taiga/taiga-1.6.6-linux-x86_64-b/bin/taiga-service start
@@ -87,7 +87,7 @@ ubuntu$ exit
 ### AWS Resources
 n.b. All resources are located in the Oregon us-west-2 AWS Region
 * **AMI**: Pre-built machine images
-  * ami-3eef740e: Pre-packaged volume snapshots and configured machine.
+  * ami-40e07b70: Pre-packaged volume snapshots and configured machine.
 * **EBS**: Ready-to-go filesystems
   * snap-42c7797d: All the below earth science data
 * **S3**: Data [Bucket](https://s3-us-west-2.amazonaws.com/w10n)
