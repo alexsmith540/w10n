@@ -1,0 +1,47 @@
+
+<html>
+<head>
+    <script data-main="//cds.jpl.nasa.gov/widgets/plot/1.0/js/main.js" src="//cds.jpl.nasa.gov/widgets/plot/1.0/components/requirejs/require.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="../css/prettify.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sunburst.css" />
+    <script src="../js/prettify.min.js"></script>
+    <style>
+    /*CSS on the existing client.*/
+    .widget{
+        float:left;
+        width:400px;
+        height:200px;
+    }
+    .widgetxyz{
+        float:left;
+        width:600px;
+        height:600px;
+        background:#000;
+    }
+    .howdowedothis{
+        float:left;
+        clear:both;
+    }
+    </style>
+</head>
+<body onload="prettyPrint();">
+ 
+    <div data-viz-type="plot.xyz" xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/lon[0:1100:5]" xmask="[100000002004087730000]" ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/lat[0:850:5]" zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/analysed_sst[0:1,0:850:5,0:1100:5]" zmask="[-32768]" class="widgetxyz" zlabel="L4 850x1150 ghrsst FULL <a href='http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/?output=html' target='_blank'>analysed_sst</a>"></div> 
+<div class="howdowedothis">How do we do this?
+<pre class="prettyprint">
+&lt;script data-main="//cds.jpl.nasa.gov/widgets/plot/1.0/js/main.js" src="//cds.jpl.nasa.gov/widgets/plot/1.0/components/requirejs/require.js"&gt;&lt;/script&gt;
+</pre>
+<pre class="prettyprint">
+&lt;div data-viz-type="plot.xyz" 
+xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/lon[0:1100:5]" 
+xmask="[100000002004087730000]" 
+ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/lat[0:850:5]" 
+zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/analysed_sst[0:1,0:850:5,0:1100:5]" zmask="[-32768]" 
+class="widgetxyz" 
+zlabel="L4 850x1150 ghrsst FULL &lt;a href='http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/?output=html' target='_blank'>analysed_sst&lt;/a&gt;"&gt;
+&lt;/div&gt; 
+</pre>
+</div>
+</body>
+</html>

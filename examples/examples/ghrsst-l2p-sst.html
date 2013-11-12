@@ -1,0 +1,73 @@
+<html>
+<head>
+<script data-main="//cds.jpl.nasa.gov/widgets/plot/1.0/js/main.js" src="//cds.jpl.nasa.gov/widgets/plot/1.0/components/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/prettify.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/sunburst.css" />
+<script src="../js/prettify.min.js"></script>
+<style>
+.widgetxyz{
+    float:left;
+    width:800px;
+    height:600px;
+}
+.howdowedothis{
+    float:left;
+    display:block;
+    clear:both;
+}
+</style>
+</head>
+<body onload="prettyPrint();">
+<div 
+data-viz-type="plot.xyz" 
+xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/lon[0:2030:10,0:1354:10]" 
+xmask="[100000002004087730000]" 
+xlabel="longitude" 
+ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/lat[0:2030:10,0:1354:10]" 
+ylabel="latitude" 
+ymask="[-9999]" 
+zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/sea_surface_temperature[0:1,0:2030:10,0:1354:10]" 
+zmask="[-9999,-32767,-128]" 
+zlabel="<a href='http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/?output=html&traverse' target='_blank'>L2P GHRSST sst</a>" 
+class="widgetxyz" 
+format="flatterrain" 
+width="800" 
+height="600" 
+colorbar="#ffffe5,#fff7bc,#fee391,#fec44f,#fe9929,#ec7014,#cc4c02,#993404,#662506"
+style="background:#000" 
+textcolor="#eee"
+></div>
+<div class="howdowedothis">
+<h4>How do we do this?</h4>
+<div>
+<p>First, embed the libs in your site</p>
+<pre class="prettyprint">
+&lt;script data-main="//cds.jpl.nasa.gov/widgets/plot/1.0/js/main.js" src="//cds.jpl.nasa.gov/widgets/plot/1.0/components/requirejs/require.js"&gt;&lt;/script&gt;
+</pre>
+
+<pre class="prettyprint">
+//Notice the URL's for step-indexing. That's how we are getting it to load a massive dataset very fast for a first look. i.e.: the [0:1,0:8201:40,0:13501:40] at the end says to step through our array dimensions and use every 40th value. http://podaac-w10n.jpl.nasa.gov/w10n/ghrsst/data/L4/NCAMERICA/JPL/MUR/2010/018/20100118-JPL-L4UHfnd-NCAMERICA-v01-fv02-MUR.nc.gz/analysed_sst[0:1,0:8201:40,0:13501:40]
+&lt;div 
+    data-viz-type="plot.xyz" 
+    xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/lon[0:2030:10,0:1354:10]" 
+    xmask="[100000002004087730000]" 
+    xlabel="longitude" 
+    ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/lat[0:2030:10,0:1354:10]" 
+    ylabel="latitude" 
+    ymask="[-9999]" 
+    zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/sea_surface_temperature[0:1,0:2030:10,0:1354:10]" 
+    zmask="[-9999,-32767,-128]" 
+    zlabel="&lt;a href='http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_T/JPL/2012/060/20120229-MODIS_T-JPL-L2P-T2012060085500.L2_LAC_GHRSST_N-v01.nc.bz2/?output=html&traverse' target='_blank'>L2P GHRSST sst&lt;/a&gt;" 
+    class="widgetxyz" 
+    format="flatterrain" 
+    width="800" 
+    height="600" 
+    colorbar="#ffffe5,#fff7bc,#fee391,#fec44f,#fe9929,#ec7014,#cc4c02,#993404,#662506"
+    style="background:#000" 
+    textcolor="#eee"
+&gt;&lt;/div&gt;
+</pre>
+</div>
+</div>
+</body>
+</html>

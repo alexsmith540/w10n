@@ -1,0 +1,46 @@
+<html>
+<head>
+    <script data-main="//cds.jpl.nasa.gov/widgets/plot/1.0/js/main.js" src="//cds.jpl.nasa.gov/widgets/plot/1.0/components/requirejs/require.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/prettify.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sunburst.css" />
+    <script src="../js/prettify.min.js"></script>
+    <style>
+    /*CSS on the existing client.*/
+    
+    .widgetxyz{
+        float:left;
+        width:800px;
+        height:400px;
+        background:#000;
+    }
+    .howdowedothis{
+        float:left;
+        display:block;
+        clear:both;
+    }
+    </style>
+</head>
+<body onload="prettyPrint();">
+    
+    
+     <div data-viz-type="plot.xyz" xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/tellus/L3/land_mass/RL05/netcdf/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lon[]" xmask="[100000002004087730000]" xlabel="lon" ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/tellus/L3/land_mass/RL05/netcdf/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat[]" ylabel="lat" zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/tellus/L3/land_mass/RL05/netcdf/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lwe_thickness[0:1]" zmask="[32767]" zlabel="<a href='http://podaac-w10n.jpl.nasa.gov/w10n/allData/tellus/L3/land_mass/RL05/netcdf/GRACE.CSR.LAND.RL05.DS.G200KM.nc/' target='_blank'>GRACE L3 Liquid_Water_Equivalent_Thickness</a>" class="widgetxyz" format="sphericalterrain" colorbar="http://scifari.org/colortable/matplotlib-1.2.1/rainbow/16[]?output=json"></div>
+
+<div class="howdowedothis">
+    <h4>How do we do this?</h4>
+    <div>
+    <p>First, embed the libs in your site</p>
+<pre class="prettyprint">
+&lt;script data-main="//cds.jpl.nasa.gov/widgets/plot/1.0/js/main.js" src="//cds.jpl.nasa.gov/widgets/plot/1.0/components/requirejs/require.js"&gt;&lt;/script&gt;
+</pre>
+
+<pre class="prettyprint">
+/*Notice the colorbar= parameter. (http://scifari.org/colortable/matplotlib-1.2.1/rainbow/16[]?output=json). In this case, we are drawing in a matplotlib color schema from a 3rd party service. You can use the service too, please browse colors here: <a href="http://scifari.org/colortable/matplotlib-1.2.1/?output=json" target="_blank">http://scifari.org/colortable/matplotlib-1.2.1/?output=json</a> and some examples: <a href="http://scifari.org/colortable/" target="_blank">http://scifari.org/colortable/</a>
+If you wish to, pass in a custom colorbar as a comma separated string of hex colors (i.e. "#ff0000,#00ff00,#00000ff")*/ 
+
+&lt;data-viz-type="plot.xyz" xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/tellus/L3/land_mass/RL05/netcdf/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lon[]" xmask="[100000002004087730000]" xlabel="lon" ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/tellus/L3/land_mass/RL05/netcdf/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat[]" ylabel="lat" zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/tellus/L3/land_mass/RL05/netcdf/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lwe_thickness[0:1]" zmask="[32767]" zlabel="&lt;a href='http://podaac-w10n.jpl.nasa.gov/w10n/allData/tellus/L3/land_mass/RL05/netcdf/GRACE.CSR.LAND.RL05.DS.G200KM.nc/' target='_blank'&gt;GRACE L3 Liquid_Water_Equivalent_Thickness&lt;/a&gt;" class="widgetxyz" spherical="true" colorbar="http://scifari.org/colortable/matplotlib-1.2.1/rainbow/16[]?output=json"
+&gt;&lt;/div&gt;
+</pre>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+<html>
+<head>
+    <script data-main="//cds.jpl.nasa.gov/widgets/plot/1.0/js/main.js" src="//cds.jpl.nasa.gov/widgets/plot/1.0/components/requirejs/require.js"></script>
+    <style>
+    /*CSS on the existing client.*/
+    .widget{
+        float:left;
+        width:400px;
+        height:200px;
+    }
+    .widgetxyz{
+        float:left;
+        width:600px;
+        height:300px;
+        background:#000;
+        
+    }
+    </style>
+</head>
+<body>
+    
+     <div data-viz-type="plot.xyz" xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[]" xmask="[100000002004087730000]" xlabel="lon" ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lat[]" ylabel="lat" zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[0:1]" zmask="[100000002004087730000]" zlabel="<a href='http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/' target='_blank'>L3 180x360 GRIDDED</a>" class="widgetxyz" colorbar="#a50026,#d73027,#f46d43,#fdae61,#fee08b,#ffffbf,#d9ef8b,#a6d96a,#66bd63,#1a9850,#006837" spherical="true"></div>
+
+     <div data-viz-type="plot.xyz" xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[]" xmask="[100000002004087730000]" xlabel="lon" ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lat[]" ylabel="lat" zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[3:4]" zmask="[100000002004087730000]" zlabel="<a href='http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/' target='_blank'>L3 180x360 GRIDDED</a>" class="widgetxyz" colorbar="#a50026,#d73027,#f46d43,#fdae61,#fee08b,#ffffbf,#d9ef8b,#a6d96a,#66bd63,#1a9850,#006837" terrain="true"></div>
+
+     <div data-viz-type="plot.xyz" xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[]" xmask="[100000002004087730000]" xlabel="lon" ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lat[]" ylabel="lat" zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[2:3]" zmask="[100000002004087730000]" zlabel="<a href='http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/' target='_blank'>L3 180x360 GRIDDED</a>" class="widgetxyz" colorbar="#ffffe5,#fff7bc,#fee391,#fec44f,#fe9929,#ec7014,#cc4c02,#993404,#662506"></div>
+
+     <div data-viz-type="plot.xyz" xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[]" xmask="[100000002004087730000]" xlabel="lon" ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lat[]" ylabel="lat" zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[20:21]" zmask="[100000002004087730000]" zlabel="<a href='http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/' target='_blank'>L3 180x360 GRIDDED</a>" class="widgetxyz" colorbar="#ffffd9,#edf8b1,#c7e9b4,#7fcdbb,#41b6c4,#1d91c0,#225ea8,#253494,#081d58" spherical="true"></div>
+
+
+    <!-- <div data-viz-type="plot.xyz" xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lon[]" xmask="[100000002004087730000]" xlabel="lon" xrange="[120,180]" ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/lat[]" ylabel="lat" yrange="[50,120]" zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/tos[0:1]" zmask="[100000002004087730000]" zlabel="<a href='http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/' target='_blank'>L3 180x360 GRIDDED, subsetted</a>" class="widgetxyz"></div> -->
+    
+     <!-- <div data-viz-type="plot.xyz" xdata="http://localhost:8001/data/tosNobs_AMSRE_L3_v7_200206-201012.nc/lon[]" xmask="[100000002004087730000]" ydata="http://localhost:8001/data/tosNobs_AMSRE_L3_v7_200206-201012.nc/lat[]" zdata="http://localhost:8001/data/tosNobs_AMSRE_L3_v7_200206-201012.nc/tosNobs[0:1,0:180,0:360]" zmask="[100000002004087730000]" class="widgetxyz"></div> -->
+
+    <!-- <div data-viz-type="plot.xyz" xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P_GRIDDED/WSAT/REMSS/2011/040/20110209-WSAT-REMSS-L2P_GRIDDED_25-wsat_20110209v7-v01.nc.gz/lon[]" xmask="[100000002004087730000]" ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P_GRIDDED/WSAT/REMSS/2011/040/20110209-WSAT-REMSS-L2P_GRIDDED_25-wsat_20110209v7-v01.nc.gz/lat[]" zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P_GRIDDED/WSAT/REMSS/2011/040/20110209-WSAT-REMSS-L2P_GRIDDED_25-wsat_20110209v7-v01.nc.gz/sea_surface_temperature[0:1]" zmask="[-32768]" zlabel="<a href='http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P_GRIDDED/WSAT/REMSS/2011/040/20110209-WSAT-REMSS-L2P_GRIDDED_25-wsat_20110209v7-v01.nc.gz/'>L2P_GRIDDED SST 720x1440 points</a>" class="widgetxyz"></div> -->
+<!-- 
+    <div data-viz-type="plot.xyz" xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2012/163/20120611-MODIS_A-JPL-L2P-A2012163204000.L2_LAC_GHRSST_N-v01.nc.bz2/lon[]" xmask="[100000002004087730000]" ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2012/163/20120611-MODIS_A-JPL-L2P-A2012163204000.L2_LAC_GHRSST_N-v01.nc.bz2/lat[]" zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L2P/MODIS_A/JPL/2012/163/20120611-MODIS_A-JPL-L2P-A2012163204000.L2_LAC_GHRSST_N-v01.nc.bz2/sea_surface_temperature[]" zmask="[-32768]" class="widgetxyz" zlabel="PODAAC L2P 2030x1054 points"></div> -->
+
+    
+    <!-- <div data-viz-type="plot.xyz" xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/lon[]" xmask="[100000002004087730000]" ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/lat[]" zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/analysed_sst[]" zmask="[-32768]" class="widgetxyz" zlabel="PODAAC L4 850x1100 points"></div> -->
+    <!-- 
+    PODAAC: 
+    <div data-viz-type="plot.xyz" xdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/lon[]" xmask="[100000002004087730000]" ydata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/lat[]" zdata="http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/analysed_sst[]" zmask="[-32768]" class="widgetxyz"></div> -->
+
+    <!-- 
+    THE BIG ONE
+    <div data-viz-type="plot.xyz" xdata="http://localhost:8001/data/20120807-ABOM-L4LRfnd-GLOB-v01-fv01_0-GAMSSA_28km.nc/lon[]" xmask="[100000002004087730000]" ydata="http://localhost:8001/data/20120807-ABOM-L4LRfnd-GLOB-v01-fv01_0-GAMSSA_28km.nc/lat[]" zdata="http://localhost:8001/data/20120807-ABOM-L4LRfnd-GLOB-v01-fv01_0-GAMSSA_28km.nc/analysed_sst[]" zmask="[-32768]" class="widgetxyz"></div> -->
+
+</body>
+</html>
