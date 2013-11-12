@@ -87,7 +87,8 @@ n.b. All resources are located in the Oregon us-west-2 AWS Region
 * **Oscar**: Wind current speed & velocity
  * Information on Oscar's Webified datasets is [here](http://podaac.jpl.nasa.gov/dataset/OSCAR_L4_OC_third-deg)
 
-**Resources:**
+**Resources:*
+*
 * [w10n homepage](http://scifari.org/taiga/)
 * [w10n tutorial](http://witoff.github.io/w10n/slides/index.html)
 * [re:Invent homepage](http://reinvent.awsevents.com/hackathon.html)
@@ -97,3 +98,7 @@ n.b. All resources are located in the Oregon us-west-2 AWS Region
 * Alex Smith
 * Jeremy Arca
 * And many more...
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/6a4e35bc50b42af056a2d9e8cd6a764b "githalytics.com")](http://githalytics.com/witoff/w10n)
+
+
