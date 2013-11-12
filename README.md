@@ -16,8 +16,8 @@ From [here](http://reinvent.awsevents.com/hackathon.html):
 
 2, Test our our live API here:
 ```
-# Open to explore in your web browser:
-http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?output=html
+# Open to explore in your web browser and note the available attributes:
+http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/?output=html
 ```
 
 ```bash
