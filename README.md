@@ -95,6 +95,7 @@ n.b. All resources are located in the Oregon us-west-2 AWS Region
 
 **More Data:**
 * *Expert Data Bucket [here](https://s3-us-west-2.amazonaws.com/w10n-full)* [~100 GB]
+* [NASA NEX Data Bucket](http://nasanex.s3.amazonaws.com/)
 * [AMSRE Data](http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/)
 * [Tellus Ocean Data](http://podaac-w10n.jpl.nasa.gov/w10n/allData/tellus/L3/ocean_mass/RL05/netcdf/GRC_JPL_RL05_DPC_OCN_500_200301_201307.nc/)
 * [Tellus Land Data](http://podaac-w10n.jpl.nasa.gov/w10n/allData/tellus/L3/land_mass/RL05/netcdf/GRACE.CSR.LAND.RL05.DS.G200KM.nc/)
