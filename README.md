@@ -53,7 +53,7 @@ http.get("http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat[0:100]
 });
 ```
 
-3, Spin up a webification machine of your own (AMI ID: ami-5cf56e6c, named: 'w10n-reinvent' in US-West-2 ) with w10n pre-configured.
+3, Spin up a webification machine of your own (AMI ID: ami-3eef740e, named: 'w10n-reinvent' in US-West-2 ) with w10n pre-configured.
 Notes:
 * Suggested instance type: m1.medium
 * Security Group should allow inboud traffic from only ports 22 & 80
@@ -85,9 +85,9 @@ ubuntu$ exit
 ### AWS Resources
 n.b. All resources are located in the Oregon us-west-2 AWS Region
 * **AMI**: Pre-built machine images
-  * ami-5cf56e6c: Pre-packaged volume snapshots and configured machine.
+  * ami-3eef740e: Pre-packaged volume snapshots and configured machine.
 * **EBS**: Ready-to-go filesystems
-  * snap-bf761180: All the below earth science data
+  * snap-42c7797d: All the below earth science data
 * **S3**: Data [Bucket](https://s3-us-west-2.amazonaws.com/w10n)
  * Grace Land [data](https://s3-us-west-2.amazonaws.com/w10n/grace-land.nc) [29.9 MB]
  * Grace Ocean [data](https://s3-us-west-2.amazonaws.com/w10n/grace-ocean.nc) [30.4 MB]
