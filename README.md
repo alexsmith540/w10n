@@ -48,7 +48,7 @@ Notes:
 > ssh -i <your ssh key.pem> ubuntu@<address of the machine you just created>
 
 # Configure this new w10n server to use port 80
-ubuntu$ sudo ./taiga/taiga-1.6.6-linux-x86_64-b/bin/taiga-service config -p 80 -d /vol/data
+ubuntu$ sudo ./taiga/taiga-1.6.6-linux-x86_64-b/bin/taiga-service config -p 80 -d /w10nVol/data
 
 # Start your server
 ubuntu$ sudo ./taiga/taiga-1.6.6-linux-x86_64-b/bin/taiga-service start
