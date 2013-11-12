@@ -16,11 +16,8 @@ From [here](http://reinvent.awsevents.com/hackathon.html):
 
 2, Test our our live API here:
 ```
-# Open in your web browser:
-# - Get Metadata with '/'
+# Open to explore in your web browser:
 http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?output=html
-# - Get 100 datapoints with '[0:100]'
-http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat[0:100]?output=html
 ```
 
 ```bash
@@ -28,7 +25,7 @@ http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat[0:100]?output=ht
 # - Get Metadata with '/'
 curl "http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?output=json"
 # - Get 100 datapoints with '[0:100]'
-curl "http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lon\[0:100\]?output=json"
+curl "http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat\[0:100\]?output=json"
 ```
 
 ```python
