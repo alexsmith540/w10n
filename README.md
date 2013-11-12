@@ -68,9 +68,9 @@ ubuntu$ exit
 ### AWS Resources
 n.b. All resources are located in the Oregon us-west-2 AWS Region
 * **AMI**: Pre-built machine images
-  * ami-fc0f97cc: Pre-packaged volume snapshots and configured machine.
+  * ami-5cf56e6c: Pre-packaged volume snapshots and configured machine.
 * **EBS**: Ready-to-go filesystems
-  * snap-42c7797d: All the below earth science data
+  * snap-bf761180: All the below earth science data
 * **S3**: Data [Bucket](https://s3-us-west-2.amazonaws.com/w10n)
  * Grace Land [data](https://s3-us-west-2.amazonaws.com/w10n/grace-land.nc) [29.9 MB]
  * Grace Ocean [data](https://s3-us-west-2.amazonaws.com/w10n/grace-ocean.nc) [30.4 MB]
