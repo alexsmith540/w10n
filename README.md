@@ -20,7 +20,7 @@ From [here](http://reinvent.awsevents.com/hackathon.html):
 # - Get Metadata with '/'
 http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?output=html
 # - Get 100 datapoints with '[0:100]'
-http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?output=html
+http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat[0:100]?output=html
 ```
 
 ```bash
