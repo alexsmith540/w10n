@@ -1,5 +1,5 @@
-## NASA's Webification
-All of NASA's science data is available to the public.  Webification (w10n) is an open source NASA data access framework that enables developers to easily access data in web-friendly formats for visualizations like this:
+## NASA/JPL's Webification
+All of NASA/JPL's science data is available to the public.  Webification (w10n) is an open source NASA/JPL data access framework that enables developers to easily access data in web-friendly formats for visualizations like this:
 
 
 <img src="https://raw.github.com/witoff/w10n/master/media/viz.png" width="400px;" alt="Challenge Text" style="width: 100px;height:50px;"/>
