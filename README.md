@@ -62,7 +62,7 @@ ubuntu$ exit
 
 5, Hack something masterful!  And/or get in touch with us (Alex Smith or Rob Witoff):
 * Realtime Collaborative Q&A with the developers [here](https://w10nreinvent.hackpad.com/)
-* Google Hangouts with the developers [here](Alexander.Smith@jpl.nasa.gov)
+* Realtime video chat with the developers [here](https://bluejeans.com/530669767/browser)
 
 
 ### AWS Resources
@@ -76,7 +76,8 @@ n.b. All resources are located in the Oregon us-west-2 AWS Region
  * Grace Ocean [data](https://s3-us-west-2.amazonaws.com/w10n/grace-ocean.nc) [30.4 MB]
  * Modis [data](https://s3-us-west-2.amazonaws.com/w10n/modis.nc) [568.5 MB]
  * Oscar [data](https://s3-us-west-2.amazonaws.com/w10n/oscar.nc) [55.5 MB]
- * *Expert Data Bucket [here](https://s3-us-west-2.amazonaws.com/w10n-full)* [~100 GB]
+ * **Terabytes of additional oceanography data is below**
+ 
 
   
 ### Background Mission Data:
@@ -87,11 +88,18 @@ n.b. All resources are located in the Oregon us-west-2 AWS Region
 * **Oscar**: Wind current speed & velocity
  * Information on Oscar's Webified datasets is [here](http://podaac.jpl.nasa.gov/dataset/OSCAR_L4_OC_third-deg)
 
-**Resources:*
-*
-* [w10n homepage](http://scifari.org/taiga/)
-* [w10n tutorial](http://witoff.github.io/w10n/slides/index.html)
-* [re:Invent homepage](http://reinvent.awsevents.com/hackathon.html)
+**Resources:**
+* [w10n Homepage](http://scifari.org/taiga/)
+* [w10n Tutorial](http://witoff.github.io/w10n/slides/index.html)
+* [re:Invent Hacathon Homepage](http://reinvent.awsevents.com/hackathon.html)
+
+**More Data:**
+* *Expert Data Bucket [here](https://s3-us-west-2.amazonaws.com/w10n-full)* [~100 GB]
+* [AMSRE Data](http://podaac-w10n.jpl.nasa.gov/w10n/allData/amsre/L3/sst_1deg_1mo/tos_AMSRE_L3_v7_200206-201012.nc/)
+* [Tellus Ocean Data](http://podaac-w10n.jpl.nasa.gov/w10n/allData/tellus/L3/ocean_mass/RL05/netcdf/GRC_JPL_RL05_DPC_OCN_500_200301_201307.nc/)
+* [Tellus Land Data](http://podaac-w10n.jpl.nasa.gov/w10n/allData/tellus/L3/land_mass/RL05/netcdf/GRACE.CSR.LAND.RL05.DS.G200KM.nc/)
+* [Odyssea Data](http://podaac-w10n.jpl.nasa.gov/w10n/allData/ghrsst/data/L4/NWE/EUR/ODYSSEA/2010/002/20100103-EUR-L4UHRfnd-NWE-v01-fv01-ODYSSEA.nc.bz2/)
+
 
 **Developers**
 * Zhangfan Xing
