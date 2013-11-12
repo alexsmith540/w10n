@@ -15,21 +15,41 @@ From [here](http://reinvent.awsevents.com/hackathon.html):
 1, Explore the interactive tutorial [here](http://witoff.github.io/w10n/slides/index.html)
 
 2, Test our our live API here:
+```
+# Open in your web browser:
+# - Get Metadata with '/'
+http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?output=html
+# - Get 100 datapoints with '[0:100]'
+http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?output=html
+```
 
 ```bash
 # bash
-curl http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?output=json
+# - Get Metadata with '/'
+curl "http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?output=json"
+# - Get 100 datapoints with '[0:100]'
+curl "http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lon\[0:100\]?output=json"
 ```
 
 ```python
 # python
 import requests
+# - Get Metadata with '/'
 requests.get('http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?output=json')
+# - Get 100 datapoints with '[0:100]'
+requests.get('http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat[0:100]?output=json')
 ```
 
 ```javascript
 // Javascript
+// - Get Metadata with '/'
 http.get("http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat/?output=json", function(res) {
+  res.on("data", function(chunk) {
+    console.log("data: " + chunk);
+  });
+});
+// - Get 100 datapoints with '[0:100]'
+http.get("http://54.212.253.164/data/GRACE.CSR.LAND.RL05.DS.G200KM.nc/lat[0:100]?output=json", function(res) {
   res.on("data", function(chunk) {
     console.log("data: " + chunk);
   });
